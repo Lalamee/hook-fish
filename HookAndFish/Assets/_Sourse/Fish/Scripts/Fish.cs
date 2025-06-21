@@ -1,10 +1,10 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class Fish : MonoBehaviour
 {
-    public event UnityAction<int> LevelSet;
+    public event Action<int> LevelSet;
 
     public int Level { get; private set; }
 

@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     private int _startLevel;
     private int _countTrappedFish;
 
-    public event UnityAction<int> LevelChange;
-    public event UnityAction<int> CountTrappedFishChange;
+    public event Action<int> LevelChange;
+    public event Action<int> CountTrappedFishChange;
 
     private void Start()
     {
@@ -28,10 +28,7 @@ public class Player : MonoBehaviour
 
     public bool IsPlayerLevelMore(int fishLevel)
     {
-        if (_level < fishLevel)
-            return false;
-        
-        return true;
+        return _level >= fishLevel;
     }
 
     public int GetLevel()
