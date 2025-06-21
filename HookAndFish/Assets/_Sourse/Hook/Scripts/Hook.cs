@@ -5,7 +5,9 @@ public class Hook : MonoBehaviour
 {
     [SerializeField] private HarpoonControl _harpoonControl;
     [SerializeField] private Laser _laser;
+    [SerializeField] private Transform _harpoonTransform;
 
+    private SpringJoint _springJoint;
     private FixedJoint _fixed;
     private Vector3 _initialPosition;
     private Vector3 _targetPosition;
@@ -19,6 +21,14 @@ public class Hook : MonoBehaviour
     private void Start()
     {
         _fixed = GetComponent<FixedJoint>();
+        _springJoint = gameObject.AddComponent<SpringJoint>();
+        _springJoint.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
+        _springJoint.spring = 100f; 
+        _springJoint.damper = 5f;   
+        _springJoint.minDistance = 0f;
+        _springJoint.maxDistance = 3f; 
+        _springJoint.enableCollision = false;
+
         _isMoving = false;
         _isReturning = false;
         _returnTimer = 0f;
