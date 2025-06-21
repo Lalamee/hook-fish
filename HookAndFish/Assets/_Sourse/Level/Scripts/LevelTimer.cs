@@ -34,6 +34,11 @@ public class LevelTimer : MonoBehaviour
 
     void UpdateTimerUI()
     {
+        if(_currentTime <= 10f)
+            timerText.color = Color.red;
+        else
+            timerText.color = Color.white;  
+        
         int minutes = Mathf.FloorToInt(_currentTime / 60);
         int seconds = Mathf.FloorToInt(_currentTime % 60);
 
