@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Sourse/Scenes/Menu.unity
+    guid: 4e39ac2ab46129643b414531c1cc89aa
+  - enabled: 1
+    path: Assets/_Sourse/Scenes/betaLevel.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/_Sourse/Scenes/betaLevel_1.unity
+    guid: bbdd292eb6fdacf4b93aece8ad4b877d
+  - enabled: 1
+    path: Assets/_Sourse/Scenes/betaLevel_2.unity
+    guid: 9b1c1fd4fdadd41449f34215b0e77aed
+  - enabled: 0
+    path: Assets/Epic Toon FX/Demo/Scenes/etfx_powerups2.unity
+    guid: 3fa05937c0d498e4688b6eb2ba76e5da
+  m_configObjects: {}
