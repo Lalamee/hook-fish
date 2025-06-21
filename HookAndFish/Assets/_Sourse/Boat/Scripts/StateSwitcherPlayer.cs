@@ -4,8 +4,9 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(BoatMover))]
 public class StateSwitcherPlayer : MonoBehaviour
 {
+    [SerializeField] private BoatMover _boatMover;
+    
     private HarpoonControl _harpoonControl;
-    private BoatMover _boatMover;
     private Laser _laser;
     private Hook _hook;
     private Vector3 _targetPosition;

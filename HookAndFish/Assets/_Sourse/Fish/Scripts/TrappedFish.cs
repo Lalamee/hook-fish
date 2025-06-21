@@ -5,8 +5,8 @@ using UnityEngine;
 public class TrappedFish : MonoBehaviour
 {
 
-    private FishLevelTransmitter _fishLevelTransmitter;
-    private FishMover _fishMover;
+    [SerializeField] private FishLevelTransmitter _fishLevelTransmitter;
+    [SerializeField] private FishMover _fishMover;
     private Vector3 _targetPosition;
     private Vector3 _finishPosition;
     private bool _isLevelChange;
@@ -17,8 +17,6 @@ public class TrappedFish : MonoBehaviour
 
     private void Start()
     {
-        _fishLevelTransmitter = GetComponent<FishLevelTransmitter>();
-        _fishMover = GetComponent<FishMover>();
         _isLevelChange = false;
         _isMoving = false;
         _lerpLimit = 1;

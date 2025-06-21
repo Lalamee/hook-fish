@@ -3,16 +3,16 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
 {
-    private LineRenderer _laser;
+    [SerializeField] private LineRenderer _laser;
+    [SerializeField] Material _laserMaterial;
+    
     private bool _isRenderer;
     private float _lineLength = 15f;
 
     private void Start()
     {
-        _laser = GetComponent<LineRenderer>();
-        
         _laser.positionCount = 2;
-        _laser.material = new Material(Shader.Find("Sprites/Default"));
+        _laser.material = _laserMaterial;
         
         Gradient gradient = new Gradient();
         gradient.SetKeys(

@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Fish))]
 public class FishLevelTransmitter : MonoBehaviour
 {
-    private Fish _fish;
+    [SerializeField] private Fish _fish;
     private Player _player;
     private LevelFinisher _levelFinisher;
 

@@ -520,8 +520,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 814680845}
-  - component: {fileID: 814680847}
   - component: {fileID: 814680846}
+  - component: {fileID: 814680847}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -559,6 +559,8 @@ MonoBehaviour:
   _hook: {fileID: 9033227544089819143}
   _harpoon: {fileID: 5166920836952217971}
   _hookScript: {fileID: 8930395058466741951}
+  _lineRenderer: {fileID: 814680847}
+  _lineMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _segmentCount: 20
   _baseAmplitude: 1
   _waveFrequency: 10
@@ -1615,6 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f446e320749188e4a83ee57d956b8a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boatMover: {fileID: 9113205056426249600}
 --- !u!1 &668602302214824284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,6 +2090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee5cbbc58b83440b6e9782f03ebf09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _laser: {fileID: 7810802985077607469}
+  _laserMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &5548231935646073801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3799,8 @@ MonoBehaviour:
   _harpoonTransform: {fileID: 5166920836952217971}
   _harpoonControl: {fileID: 348439224}
   _laser: {fileID: 5541308332482202784}
+  _fixed: {fileID: 9033227544089819144}
+  _spring: {fileID: 9033227544089819145}
 --- !u!4 &9033227544089819143
 Transform:
   m_ObjectHideFlags: 0

@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class LookAtCamera : MonoBehaviour
 {
-    private Transform _transform;
     private Camera mainCamera;
     
     private void Start()
     {
-        _transform = GetComponent<Transform>();
         mainCamera = Camera.main;
     }
 
@@ -15,7 +13,7 @@ public class LookAtCamera : MonoBehaviour
     {
         if (mainCamera != null)
         {
-            _transform.LookAt(2 * _transform.position - mainCamera.transform.position);
+            transform.LookAt(2 * transform.position - mainCamera.transform.position);
         }
     }
 }

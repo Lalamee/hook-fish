@@ -7,9 +7,9 @@ public class Hook : MonoBehaviour
     [SerializeField] private Transform _harpoonTransform;
     [SerializeField] private HarpoonControl _harpoonControl;
     [SerializeField] private Laser _laser;
-
-    private FixedJoint _fixed;
-    private SpringJoint _spring;
+    [SerializeField] private FixedJoint _fixed;
+    [SerializeField] private SpringJoint _spring;
+    
     private Vector3 _initialPosition;
     private Vector3 _targetPosition;
     private bool _isMoving;
@@ -22,9 +22,6 @@ public class Hook : MonoBehaviour
 
     private void Start()
     {
-        _fixed = GetComponent<FixedJoint>();
-
-        _spring = GetComponent<SpringJoint>();
         _spring.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
         _spring.spring = 100f;
         _spring.damper = 5f;

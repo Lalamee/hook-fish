@@ -655,9 +655,9 @@ GameObject:
   - component: {fileID: -222689081972862429}
   - component: {fileID: 8195627559811418641}
   - component: {fileID: 7773173327666862876}
+  - component: {fileID: 5728583925156563328}
   - component: {fileID: 8253420715803025213}
   - component: {fileID: 1035686981075178046}
-  - component: {fileID: 5728583925156563328}
   m_Layer: 0
   m_Name: Fish1
   m_TagString: Untagged
@@ -764,6 +764,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7791834fe241d294784ded46be93d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5728583925156563328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042627746069258380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a620c950cf1a244eb8d7a36a1d130bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fishLevelTransmitter: {fileID: 8253420715803025213}
+  _fishMover: {fileID: 1035686981075178046}
 --- !u!114 &8253420715803025213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021b2b15dfba7ec4785337907af27a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fish: {fileID: 7773173327666862876}
 --- !u!114 &1035686981075178046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,15 +804,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
---- !u!114 &5728583925156563328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9042627746069258380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a620c950cf1a244eb8d7a36a1d130bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

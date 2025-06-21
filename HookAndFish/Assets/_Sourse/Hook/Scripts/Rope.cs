@@ -6,26 +6,22 @@ public class Rope : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform _hook;
     [SerializeField] private Transform _harpoon;
-    [SerializeField] private Hook _hookScript; 
+    [SerializeField] private Hook _hookScript;
+    [SerializeField] private LineRenderer _lineRenderer;
 
     [Header("Appearance Settings")]
+    [SerializeField] private Material _lineMaterial;
     [SerializeField] private int _segmentCount = 25;
     [SerializeField] private float _baseAmplitude = 0.1f;
     [SerializeField] private float _waveFrequency = 10f;
     [SerializeField] private float _waveSpeed = 4f;
     [SerializeField] private float _lineWidth = 0.06f;
     [SerializeField] private Color _lineColor = new Color(0.1f, 0.1f, 0.1f, 1f);
-
-    private LineRenderer _lineRenderer;
-    private Material _lineMaterial;
-
+    
     private void Awake()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
-        
         _lineRenderer.useWorldSpace = true;
         _lineRenderer.positionCount = _segmentCount;
-        _lineMaterial = new Material(Shader.Find("Sprites/Default"));
         _lineRenderer.material = _lineMaterial;
         _lineRenderer.startColor = _lineColor;
         _lineRenderer.endColor = _lineColor;
