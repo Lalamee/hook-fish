@@ -1,36 +1,59 @@
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
 {
     private LineRenderer _laser;
-    private bool isRenderer;
-    private float lineLength = 10f;
+    private bool _isRenderer;
+    private float _lineLength = 15f;
 
     private void Start()
     {
         _laser = GetComponent<LineRenderer>();
+        
+        _laser.positionCount = 2;
+        _laser.material = new Material(Shader.Find("Sprites/Default"));
+        
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[]
+            {
+                new GradientColorKey(Color.red, 0f),
+                new GradientColorKey(Color.clear, 1f)
+            },
+            new GradientAlphaKey[]
+            {
+                new GradientAlphaKey(1f, 0f),
+                new GradientAlphaKey(0f, 1f)
+            }
+        );
+        _laser.colorGradient = gradient;
+
+        _laser.startWidth = 0.06f;
+        _laser.endWidth = 0.06f;
+        _laser.enabled = false;
     }
 
     private void Update()
     {
-        if (isRenderer)
+        if (_isRenderer)
         {
-            Vector3 aimDirection = transform.forward;
-            Vector3 lineEnd = transform.position + aimDirection * lineLength;
-            _laser.SetPosition(0, transform.position);
-            _laser.SetPosition(1, lineEnd);
+            Vector3 start = transform.position;
+            Vector3 end = start + transform.forward * _lineLength;
+            _laser.SetPosition(0, start);
+            _laser.SetPosition(1, end);
         }
     }
 
     public void OnRenderer()
     {
         _laser.enabled = true;
-        isRenderer = true;
+        _isRenderer = true;
     }
 
     public void OffRenderer()
     {
         _laser.enabled = false;
-        isRenderer = false;
+        _isRenderer = false;
     }
 }

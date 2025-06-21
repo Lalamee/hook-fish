@@ -1,39 +1,36 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(FixedJoint), typeof(SpringJoint), typeof(Rigidbody))]
 public class Hook : MonoBehaviour
 {
+    [SerializeField] private Transform _harpoonTransform;
     [SerializeField] private HarpoonControl _harpoonControl;
     [SerializeField] private Laser _laser;
-    [SerializeField] private Transform _harpoonTransform;
 
-    private SpringJoint _springJoint;
     private FixedJoint _fixed;
+    private SpringJoint _spring;
     private Vector3 _initialPosition;
     private Vector3 _targetPosition;
-    private Fish _hookedObject;
     private bool _isMoving;
     private bool _isReturning;
     private float _returnTimer;
-    private float _returnTime;
-    private float _speed;
+    private float _returnTime = 0.5f;
+    private float _speed = 20f;
+
+    public bool IsHookActive => _isMoving || _isReturning;
 
     private void Start()
     {
         _fixed = GetComponent<FixedJoint>();
-        _springJoint = gameObject.AddComponent<SpringJoint>();
-        _springJoint.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
-        _springJoint.spring = 100f; 
-        _springJoint.damper = 5f;   
-        _springJoint.minDistance = 0f;
-        _springJoint.maxDistance = 3f; 
-        _springJoint.enableCollision = false;
 
-        _isMoving = false;
-        _isReturning = false;
-        _returnTimer = 0f;
-        _speed = 20f;
-        _returnTime = 0.5f;
+        _spring = GetComponent<SpringJoint>();
+        _spring.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
+        _spring.spring = 100f;
+        _spring.damper = 5f;
+        _spring.minDistance = 0f;
+        _spring.maxDistance = 3f;
+        _spring.enableCollision = false;
     }
 
     private void Update()
@@ -42,71 +39,57 @@ public class Hook : MonoBehaviour
         {
             _initialPosition = transform.position;
             _isMoving = true;
-            
+
             _laser.OffRenderer();
             _harpoonControl.LockMovement();
-            
+
             StartCoroutine(ReturnTimerCoroutine());
         }
 
         if (_isMoving)
         {
-            MoveHook();
+            transform.Translate(Vector3.forward * _speed * Time.deltaTime);
         }
 
         if (_isReturning)
         {
-            ReturnHook();
-        }
-    }
+            _returnTimer += Time.deltaTime;
+            float lerpProgress = _returnTimer / _returnTime;
+            transform.position = Vector3.Lerp(_targetPosition, _initialPosition, lerpProgress);
 
-    private void MoveHook()
-    {
-        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
-    }
-
-    private void ReturnHook()
-    {
-        _returnTimer += Time.deltaTime;
-        float lerpProgress = _returnTimer / _returnTime;
-        transform.position = Vector3.Lerp(_targetPosition, _initialPosition, lerpProgress);
-
-        if (lerpProgress >= 1f)
-        {
-            _fixed.connectedBody = null;
-            _harpoonControl.UnlockMovement();
-            _laser.OnRenderer();
-            _isReturning = false;
-            _returnTimer = 0f;
-        }
-    }
-
-    private void ChangeHookState()
-    {
-        if (_isMoving && !_isReturning)
-        {
-            _targetPosition = transform.position;
-            _isMoving = false;
-            _isReturning = true;
+            if (lerpProgress >= 1f)
+            {
+                _fixed.connectedBody = null;
+                _harpoonControl.UnlockMovement();
+                _laser.OnRenderer();
+                _isReturning = false;
+                _returnTimer = 0f;
+            }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!_isReturning && collision.gameObject.TryGetComponent(out TrappedFish _trappedFish))
+        if (!_isReturning && collision.gameObject.TryGetComponent(out TrappedFish trappedFish))
         {
             _targetPosition = transform.position;
             _isMoving = false;
             _isReturning = true;
-            _trappedFish.gameObject.GetComponent<Collider>().enabled = false;
-            _fixed.connectedBody = _trappedFish.GetComponent<Rigidbody>();
-            _trappedFish.CheckPosition(_initialPosition, _returnTime, _returnTimer);
+
+            trappedFish.GetComponent<Collider>().enabled = false;
+            _fixed.connectedBody = trappedFish.GetComponent<Rigidbody>();
+            trappedFish.CheckPosition(_initialPosition, _returnTime, _returnTimer);
         }
     }
 
     private IEnumerator ReturnTimerCoroutine()
     {
         yield return new WaitForSeconds(_returnTime);
-        ChangeHookState();
+        if (_isMoving && !_isReturning)
+        {
+            _targetPosition = transform.position;
+            _isMoving = false;
+            _isReturning = true;
+        }
     }
 }
