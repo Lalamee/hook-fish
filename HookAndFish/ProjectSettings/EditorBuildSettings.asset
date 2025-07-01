@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/PluginYourGames/Example/Scenes/ExampleYG2.unity
+    guid: e49bf7e58fdb4db4c9df51f0ddb8f327
+  - enabled: 1
+    path: Assets/PluginYourGames/Modules/Localization/Example/Scenes/Localization.unity
+    guid: 058cfa478132af54f8ee895e24ea5a2a
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 4e39ac2ab46129643b414531c1cc89aa
   - enabled: 1
@@ -20,10 +26,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_powerups2.unity
     guid: 3fa05937c0d498e4688b6eb2ba76e5da
-  - enabled: 1
-    path: Assets/PluginYourGames/Example/Scenes/ExampleYG2.unity
-    guid: e49bf7e58fdb4db4c9df51f0ddb8f327
-  - enabled: 1
-    path: Assets/PluginYourGames/Modules/Localization/Example/Scenes/Localization.unity
-    guid: 058cfa478132af54f8ee895e24ea5a2a
   m_configObjects: {}
