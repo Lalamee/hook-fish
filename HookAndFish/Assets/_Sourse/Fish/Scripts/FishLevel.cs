@@ -5,8 +5,7 @@ using UnityEngine;
 public class FishLevel : MonoBehaviour
 {
     [SerializeField] private Fish _fish;
-    [SerializeField] private TMP_Text _level;
-
+    [SerializeField] private LanguageSwitcher _languageText;
     private void OnEnable()
     {
         _fish.LevelSet += OnLevelSet;
@@ -19,6 +18,6 @@ public class FishLevel : MonoBehaviour
 
     private void OnLevelSet(int level)
     {
-        _level.text = level.ToString() + " Level";
+        _languageText.baseText = level.ToString();
     }
 }

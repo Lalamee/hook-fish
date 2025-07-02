@@ -6,7 +6,12 @@ using UnityEngine;
 public class PlayerLevel : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private TMP_Text _level;
+    [SerializeField] private LanguageSwitcher _languageText;
+
+    private void Start()
+    {
+        OnLevelChange(1);
+    }
 
     private void OnEnable()
     {
@@ -18,13 +23,9 @@ public class PlayerLevel : MonoBehaviour
         _player.LevelChange -= OnLevelChange;
     }
 
-    public string GetLevel()
-    {
-        return _level.text;
-    }                                      
-
     private void OnLevelChange(int level)
     {
-        _level.text = "Lvl " + level.ToString();
+        _languageText.baseText = level.ToString();
+        _languageText.UpdateText();
     }
 }

@@ -1,42 +1,58 @@
+using System;
 using UnityEngine;
-using YG;
 using TMPro;
+using YG;
 
 public class LanguageSwitcher : MonoBehaviour
 {
     public string ru, en, tr;
+    public string baseText;
 
-    private TextMeshProUGUI textComponent;
+    private TMP_Text textComponent;
+    private string lastAddedText = "";
+    private string currentLang;
 
     private void Awake()
     {
         textComponent = GetComponent<TextMeshProUGUI>();
-        SwitchLanguage(YG2.lang);
+        currentLang = YG2.lang;
+    }
+
+    private void Start()
+    {
+        UpdateText();
     }
 
     private void OnEnable()
     {
-        YG2.onSwitchLang += SwitchLanguage;
+        YG2.onSwitchLang += OnLanguageChanged;
     }
 
     private void OnDisable()
     {
-        YG2.onSwitchLang -= SwitchLanguage;
+        YG2.onSwitchLang -= OnLanguageChanged;
     }
 
-    public void SwitchLanguage(string lang)
+    private void OnLanguageChanged(string lang)
     {
-        switch (lang)
+        currentLang = lang;
+        UpdateText();
+    }
+
+    public void UpdateText()
+    {
+        switch (currentLang)
         {
             case "ru":
-                textComponent.text = ru;
+                lastAddedText = " " + ru;
                 break;
             case "tr":
-                textComponent.text = tr;
+                lastAddedText = " " + tr;
                 break;
             default:
-                textComponent.text = en;
+                lastAddedText = " " + en;
                 break;
         }
+        textComponent.text = baseText + lastAddedText;
     }
 }

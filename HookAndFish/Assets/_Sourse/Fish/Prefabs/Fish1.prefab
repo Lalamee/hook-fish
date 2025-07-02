@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 7926293101185073909}
   - component: {fileID: 6069023730690647521}
   - component: {fileID: 187811067242562599}
+  - component: {fileID: 3945337067330550772}
   m_Layer: 5
   m_Name: Level
   m_TagString: Untagged
@@ -629,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fish: {fileID: 7773173327666862876}
-  _level: {fileID: 7926293101185073909}
+  _languageText: {fileID: 3945337067330550772}
 --- !u!114 &187811067242562599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,6 +643,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d38082b3abc06448e52a4d7ec6ea4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3945337067330550772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233960563261399669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f95d33bbc8d93429e7b047716a02cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C"
+  en: Level
+  tr: Seviye
+  baseText: 
 --- !u!1 &9042627746069258380
 GameObject:
   m_ObjectHideFlags: 0

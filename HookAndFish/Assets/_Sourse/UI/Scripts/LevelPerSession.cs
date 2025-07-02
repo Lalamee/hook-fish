@@ -5,10 +5,10 @@ using UnityEngine;
 public class LevelPerSession : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private TMP_Text _level;
+    [SerializeField] private LanguageSwitcher _languageText;
 
     private void OnEnable()
     {
-        _level.text = '+' + _player.GetLevel().ToString() + " Lvl";
+        _languageText.baseText = '+' + _player.GetLevel().ToString() + " ";
     }
 }
