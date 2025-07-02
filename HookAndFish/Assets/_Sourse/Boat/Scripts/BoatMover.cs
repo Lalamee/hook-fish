@@ -1,63 +1,25 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class BoatMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _rotationSpeed = 4f;
 
-    private LevelFinisher _levelFinisher;
-    private List<AreaForBoat> _allTargetAreas = new List<AreaForBoat>();
-
-    private void Start()
-    {
-        _levelFinisher = FindObjectOfType<LevelFinisher>();
-    }
+    private Vector3 _currentTarget;
+    private bool _hasTarget = false;
 
     private void Update()
     {
-        Vector3 nearestTarget = FindNearestTarget();
-        MoveToTarget(nearestTarget);
-    }
-
-    private void OnEnable()
-    {
-        FindAllTargetAreas();
-    }
-
-    private void FindAllTargetAreas()
-    {
-        _allTargetAreas.Clear();
-        AreaForBoat[] areas = FindObjectsOfType<AreaForBoat>();
-        _allTargetAreas.AddRange(areas);
-    }
-
-    private Vector3 FindNearestTarget()
-    {
-        _allTargetAreas.RemoveAll(area => area == null);
-
-        if (_allTargetAreas.Count == 0)
+        if (_hasTarget)
         {
-            _levelFinisher.GoodEnd();
-            return Vector3.zero;
+            MoveToTarget(_currentTarget);
         }
+    }
 
-        Vector3 nearestTarget = _allTargetAreas[0].transform.position;
-        float nearestDistance = Mathf.Infinity;
-
-        foreach (AreaForBoat area in _allTargetAreas)
-        {
-            Vector3 targetPoint = area.transform.position;
-            float distance = Vector3.Distance(transform.position, targetPoint);
-
-            if (distance < nearestDistance)
-            {
-                nearestTarget = targetPoint;
-                nearestDistance = distance;
-            }
-        }
-
-        return nearestTarget;
+    public void SetTarget(Vector3 target)
+    {
+        _currentTarget = target;
+        _hasTarget = true;
     }
 
     private void MoveToTarget(Vector3 target)
@@ -74,7 +36,10 @@ public class BoatMover : MonoBehaviour
     {
         float scaledRotationSpeed = _rotationSpeed * Time.deltaTime;
 
-        Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, scaledRotationSpeed);
+        if (moveDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, scaledRotationSpeed);
+        }
     }
 }
