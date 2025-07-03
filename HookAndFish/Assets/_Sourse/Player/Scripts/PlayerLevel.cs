@@ -10,7 +10,7 @@ public class PlayerLevel : MonoBehaviour
 
     private void Start()
     {
-        OnLevelChange(1);
+        OnLevelChange(_player.GetLevel());
     }
 
     private void OnEnable()

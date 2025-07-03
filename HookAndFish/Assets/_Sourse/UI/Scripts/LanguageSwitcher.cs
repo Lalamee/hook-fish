@@ -26,6 +26,7 @@ public class LanguageSwitcher : MonoBehaviour
     private void OnEnable()
     {
         YG2.onSwitchLang += OnLanguageChanged;
+        OnLanguageChanged(YG2.lang);
     }
 
     private void OnDisable()

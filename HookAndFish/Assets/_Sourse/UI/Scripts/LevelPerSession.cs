@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using YG;
 
 [RequireComponent(typeof(TMP_Text))]
 public class LevelPerSession : MonoBehaviour
@@ -10,5 +11,8 @@ public class LevelPerSession : MonoBehaviour
     private void OnEnable()
     {
         _languageText.baseText = '+' + _player.GetLevel().ToString() + " ";
+        
+        YG2.saves.playerLevel += _player.GetLevel();
+
     }
 }
