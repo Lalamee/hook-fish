@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using YG;
 
 public class Player : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _countTrappedFish = 0;
-        _level = 1;
+        _level = YG2.saves.playerLevel;
         _startLevel = _level;
         LevelChange?.Invoke(_level);
     }
