@@ -13,19 +13,19 @@ namespace IJunior.TypedScenes
     using UnityEngine.SceneManagement;
     
     
-    public class betaLevel : TypedScene
+    public class Leaderboards : TypedScene
     {
         
-        private const string _sceneName = "betaLevel";
+        private const string _sceneName = "Leaderboards";
         
-        public static void Load(int argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static void Load(LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
-            LoadScene(_sceneName, loadSceneMode, argument);
+            LoadScene(_sceneName, loadSceneMode);
         }
         
-        public static UnityEngine.AsyncOperation LoadAsync(int argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static UnityEngine.AsyncOperation LoadAsync(LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
-            return LoadScene(_sceneName, loadSceneMode, argument);
+            return LoadScene(_sceneName, loadSceneMode);
         }
     }
 }

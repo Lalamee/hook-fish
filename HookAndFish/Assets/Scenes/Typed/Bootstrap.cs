@@ -13,10 +13,10 @@ namespace IJunior.TypedScenes
     using UnityEngine.SceneManagement;
     
     
-    public class betaLevel_2 : TypedScene
+    public class Bootstrap : TypedScene
     {
         
-        private const string _sceneName = "betaLevel_2";
+        private const string _sceneName = "Bootstrap";
         
         public static void Load(int argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
