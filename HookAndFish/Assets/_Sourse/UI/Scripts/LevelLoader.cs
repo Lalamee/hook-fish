@@ -24,4 +24,9 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
     {
         SceneManager.LoadScene(argument);
     }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(YG2.saves.currentLevel + 1);
+    }
 }

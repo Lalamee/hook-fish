@@ -1102,7 +1102,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2122940708}
-  - component: {fileID: 2122940709}
   m_Layer: 0
   m_Name: Entry Point
   m_TagString: Untagged
@@ -1125,18 +1124,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2122940709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122940707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b357847284ea0743a104d3ddaf754f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4898231023718199637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1145,6 +1132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2263283510004355802, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263283510004355802, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2746921760442673286, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: _player
       value: 
@@ -1233,6 +1228,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 5937414706002826770}
+    - target: {fileID: 4329027422834061044, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 4838856022550045128, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1267,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086195462761486463, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
