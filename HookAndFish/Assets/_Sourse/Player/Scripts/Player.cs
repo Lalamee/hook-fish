@@ -20,8 +20,13 @@ public class Player : MonoBehaviour
     }
 
     public void CatchFish(int fishLevel)
-    {
-        _level += fishLevel;
+    { 
+        if(_level == fishLevel && fishLevel == 1)
+            _level += fishLevel;
+        else if(_level == fishLevel)
+            _level += fishLevel / 2;
+        else
+            _level++;
         _countTrappedFish++;
         CountTrappedFishChange?.Invoke(_countTrappedFish);
         LevelChange?.Invoke(_level);
