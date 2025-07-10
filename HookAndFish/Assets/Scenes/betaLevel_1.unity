@@ -1271,8 +1271,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4831957030111798659, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4898231023718199639}
   m_SourcePrefab: {fileID: 100100000, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+--- !u!1 &4898231023718199638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4831957030111798659, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+  m_PrefabInstance: {fileID: 4898231023718199637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4898231023718199639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4898231023718199638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: -150
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_StartCorner: 0
+  m_StartAxis: 1
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 50, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!114 &5937414706002826770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3508943848337061214, guid: 947f62dca2ad0e24ab7e9281301a1617, type: 3}
