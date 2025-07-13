@@ -12,6 +12,10 @@ public class Spawner : MonoBehaviour
     private Player _player;
     private int? _previousFishLevel;
 
+    private int _previousSpawnIndex = -1;
+    private int _leftStreak = 0;
+    private int _rightStreak = 0;
+
     private void Start()
     {
         _spawnPoints = GetComponentsInChildren<Transform>();
@@ -31,7 +35,7 @@ public class Spawner : MonoBehaviour
 
     private void CreateFishAtRandomPoint()
     {
-        int spawnPointIndex = Random.Range(1, _spawnPoints.Length);
+        int spawnPointIndex = GetValidSpawnPointIndex();
         Transform spawnPoint = _spawnPoints[spawnPointIndex];
 
         GameObject fishPrefab = GetRandomPrefab(_fishPrefabs);
@@ -39,13 +43,15 @@ public class Spawner : MonoBehaviour
         fishObject.transform.parent = spawnPoint;
 
         Fish fish = fishObject.GetComponent<Fish>();
-
         if (fish != null)
         {
             int level = GenerateFishLevel();
             fish.SetLevel(level);
             _previousFishLevel = level;
         }
+
+        UpdateSpawnSideTracking(spawnPointIndex);
+        _previousSpawnIndex = spawnPointIndex;
     }
 
     private GameObject GetRandomPrefab(GameObject[] prefabs)
@@ -58,7 +64,7 @@ public class Spawner : MonoBehaviour
     {
         int playerLevel = _player.GetLevel();
         int firstLevel = Mathf.Min(1, _player.GetStartLevel());
-        int levelStep = (int)Random.Range(firstLevel, playerLevel + 10);
+        int levelStep = Random.Range(firstLevel, playerLevel + 10);
 
         if (_previousFishLevel.HasValue && _previousFishLevel.Value < playerLevel)
         {
@@ -75,6 +81,48 @@ public class Spawner : MonoBehaviour
         else
         {
             return playerLevel;
+        }
+    }
+
+    private int GetValidSpawnPointIndex()
+    {
+        int maxAttempts = 20;
+        int half = _spawnPoints.Length / 2;
+
+        for (int attempt = 0; attempt < maxAttempts; attempt++)
+        {
+            int index = Random.Range(1, _spawnPoints.Length);
+
+            if (index == _previousSpawnIndex)
+                continue; 
+
+            bool isLeft = index < half;
+            bool isRight = index >= half;
+
+            if (_leftStreak >= 2 && isLeft) continue;
+            if (_rightStreak >= 2 && isRight) continue;
+
+            return index;
+        }
+        
+        return (_previousSpawnIndex + 1) % (_spawnPoints.Length - 1) + 1;
+    }
+
+    private void UpdateSpawnSideTracking(int index)
+    {
+        int half = _spawnPoints.Length / 2;
+        bool isLeft = index < half;
+        bool isRight = index >= half;
+
+        if (isLeft)
+        {
+            _leftStreak++;
+            _rightStreak = 0;
+        }
+        else if (isRight)
+        {
+            _rightStreak++;
+            _leftStreak = 0;
         }
     }
 }
