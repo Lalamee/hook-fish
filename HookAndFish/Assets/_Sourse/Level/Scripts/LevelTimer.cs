@@ -4,10 +4,11 @@ using TMPro;
 public class LevelTimer : MonoBehaviour
 {
     [SerializeField] private TMP_Text timerText;
-
+    [SerializeField] private int _levelMinutes = 0; 
+    [SerializeField] private int _levelSeconds = 30; 
+    
+    
     private LevelFinisher _levelFinisher;
-    private int _levelMinutes = 0; 
-    private int _levelSeconds = 30; 
     private float _currentTime = 0f;
 
     void Start()

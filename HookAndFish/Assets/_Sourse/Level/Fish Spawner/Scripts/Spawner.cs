@@ -91,7 +91,7 @@ public class Spawner : MonoBehaviour
 
         for (int attempt = 0; attempt < maxAttempts; attempt++)
         {
-            int index = Random.Range(1, _spawnPoints.Length);
+            int index = Random.Range(1, _spawnPoints.Length);  
 
             if (index == _previousSpawnIndex)
                 continue; 
