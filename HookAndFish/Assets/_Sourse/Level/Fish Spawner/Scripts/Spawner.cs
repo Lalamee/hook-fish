@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _fishPrefabs;
+    [SerializeField] private GameObject[] _fishPrefabs; 
     [SerializeField] private float _secondsBetweenSpawn;
 
     private Transform[] _spawnPoints;
@@ -38,26 +38,31 @@ public class Spawner : MonoBehaviour
         int spawnPointIndex = GetValidSpawnPointIndex();
         Transform spawnPoint = _spawnPoints[spawnPointIndex];
 
-        GameObject fishPrefab = GetRandomPrefab(_fishPrefabs);
+        int fishLevel = GenerateFishLevel();
+        GameObject fishPrefab = ChooseFishPrefabByLevel(fishLevel);
+
         GameObject fishObject = Instantiate(fishPrefab, spawnPoint.position, spawnPoint.rotation);
         fishObject.transform.parent = spawnPoint;
 
         Fish fish = fishObject.GetComponent<Fish>();
         if (fish != null)
         {
-            int level = GenerateFishLevel();
-            fish.SetLevel(level);
-            _previousFishLevel = level;
+            fish.SetLevel(fishLevel);
+            _previousFishLevel = fishLevel;
         }
 
         UpdateSpawnSideTracking(spawnPointIndex);
         _previousSpawnIndex = spawnPointIndex;
     }
 
-    private GameObject GetRandomPrefab(GameObject[] prefabs)
+    private GameObject ChooseFishPrefabByLevel(int fishLevel)
     {
-        int randomIndex = Random.Range(0, prefabs.Length);
-        return prefabs[randomIndex];
+        int playerLevel = _player.GetLevel();
+
+        if (fishLevel > playerLevel)
+            return _fishPrefabs[0]; 
+        else
+            return _fishPrefabs[1]; 
     }
 
     private int GenerateFishLevel()
@@ -94,7 +99,7 @@ public class Spawner : MonoBehaviour
             int index = Random.Range(1, _spawnPoints.Length);  
 
             if (index == _previousSpawnIndex)
-                continue; 
+                continue;
 
             bool isLeft = index < half;
             bool isRight = index >= half;
@@ -104,7 +109,7 @@ public class Spawner : MonoBehaviour
 
             return index;
         }
-        
+
         return (_previousSpawnIndex + 1) % (_spawnPoints.Length - 1) + 1;
     }
 

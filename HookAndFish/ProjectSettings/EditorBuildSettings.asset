@@ -41,4 +41,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PluginYourGames/Modules/Leaderboards/Example/Scenes/Leaderboards.unity
     guid: 2779577180fcc424b8955a8087f136f6
+  - enabled: 1
+    path: Assets/Scenes/level_3.unity
+    guid: 99bc2351b7b02c74a87c7adc3cbc53c6
+  - enabled: 1
+    path: Assets/Scenes/level_4.unity
+    guid: 5b2c4324c16fb134e82b6f7c60b2aec2
+  - enabled: 1
+    path: Assets/Scenes/level_5.unity
+    guid: 572947bc27d14ea4b9a76be0bd45409d
+  - enabled: 1
+    path: Assets/Scenes/level_6.unity
+    guid: fc240fbb3f1cd0645a5e114b5f0a33a5
   m_configObjects: {}
