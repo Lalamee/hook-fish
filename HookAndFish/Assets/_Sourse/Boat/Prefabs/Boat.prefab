@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256725414265114870}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000795901, y: -0.1573552, z: 0.003987328, w: 0.9875337}
+  m_LocalRotation: {x: -0.0006459654, y: -0.15736823, z: 0.0038850536, w: 0.98753214}
   m_LocalPosition: {x: -0.0000000037252903, y: 0.2638774, z: 0.00000015087426}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -440,8 +440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8074b8c212c7eb54dbf7214a65c1008a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
-  _rotationSpeed: 4
+  _moveSpeed: 12
+  _rotationSpeed: 2
 --- !u!114 &630425756083821026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4369104959515154890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.63869643, y: 0.15875459, z: -0.24214232, w: 0.71290314}
+  m_LocalRotation: {x: 0.6386337, y: 0.15875304, z: -0.24209288, w: 0.7129765}
   m_LocalPosition: {x: -0.0000000027939677, y: 0.13966924, z: -0.000000006519258}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -820,7 +820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4369495812996903917}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48986217, y: 0.17401029, z: 0.52586013, w: 0.6732211}
+  m_LocalRotation: {x: 0.48986515, y: 0.17404793, z: 0.52582234, w: 0.67323864}
   m_LocalPosition: {x: 0.0000000055879354, y: 0.13966921, z: 0.0000000060535967}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1032,7 +1032,7 @@ Transform:
   m_GameObject: {fileID: 5652814592437780820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1055,10 +1055,10 @@ MonoBehaviour:
   _hookScript: {fileID: 8029824127983719147}
   _lineRenderer: {fileID: 6198799425114423674}
   _lineMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  _segmentCount: 20
+  _segmentCount: 4
   _baseAmplitude: 1
-  _waveFrequency: 10
-  _waveSpeed: 4
+  _waveFrequency: 2
+  _waveSpeed: 2
   _lineWidth: 0.1
   _lineColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
 --- !u!120 &6198799425114423674
@@ -1695,7 +1695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7096344092185469731}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0018880371, y: -0.095588796, z: -0.0032047336, w: 0.99541396}
+  m_LocalRotation: {x: 0.0018709007, y: -0.095566325, z: -0.0031132256, w: 0.99541646}
   m_LocalPosition: {x: 0.0000000018626451, y: 0.26387748, z: -0.0000000011641532}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -1800,7 +1800,7 @@ Transform:
   m_GameObject: {fileID: 7309703538516502640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00022}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1956,6 +1956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8373d163211ae4d438864082e5a3aa8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _returnTime: 0.55
   _harpoonTransform: {fileID: 3515435378667195444}
   _harpoonControl: {fileID: 3230218896608000766}
   _laser: {fileID: 8254225335937019386}

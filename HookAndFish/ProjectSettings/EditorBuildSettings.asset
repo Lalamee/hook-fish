@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 4e39ac2ab46129643b414531c1cc89aa
   - enabled: 1
-    path: Assets/Scenes/betaLevel_1.unity
+    path: Assets/Scenes/level_2.unity
     guid: bbdd292eb6fdacf4b93aece8ad4b877d
+  - enabled: 1
+    path: Assets/Scenes/level_1.unity
+    guid: 3f981dc3756e16d4f9a8f20ff382b42a
   - enabled: 0
     path: Assets/PluginYourGames/Example/Scenes/ExampleYG2.unity
     guid: e49bf7e58fdb4db4c9df51f0ddb8f327
@@ -35,7 +38,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PluginYourGames/Modules/Storage/Example/Scenes/Storage.unity
     guid: abb058d977e9e3241a3ae83e420d91ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/PluginYourGames/Modules/Leaderboards/Example/Scenes/Leaderboards.unity
     guid: 2779577180fcc424b8955a8087f136f6
   m_configObjects: {}
