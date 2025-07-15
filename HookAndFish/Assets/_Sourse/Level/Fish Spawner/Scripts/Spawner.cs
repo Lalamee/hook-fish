@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _fishPrefabs; 
+    [SerializeField] private GameObject[] _fishPrefabs;
     [SerializeField] private float _secondsBetweenSpawn;
 
     private Transform[] _spawnPoints;
@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
     private int _previousSpawnIndex = -1;
     private int _leftStreak = 0;
     private int _rightStreak = 0;
+    private int _highLevelFishStreak = 2;
+    private int _levelFishStreak = 0;
 
     private void Start()
     {
@@ -40,7 +42,6 @@ public class Spawner : MonoBehaviour
 
         int fishLevel = GenerateFishLevel();
         GameObject fishPrefab = ChooseFishPrefabByLevel(fishLevel);
-
         GameObject fishObject = Instantiate(fishPrefab, spawnPoint.position, spawnPoint.rotation);
         fishObject.transform.parent = spawnPoint;
 
@@ -58,35 +59,52 @@ public class Spawner : MonoBehaviour
     private GameObject ChooseFishPrefabByLevel(int fishLevel)
     {
         int playerLevel = _player.GetLevel();
-
         if (fishLevel > playerLevel)
-            return _fishPrefabs[0]; 
+            return _fishPrefabs[0];
         else
-            return _fishPrefabs[1]; 
+            return _fishPrefabs[1];
     }
 
     private int GenerateFishLevel()
     {
         int playerLevel = _player.GetLevel();
         int firstLevel = Mathf.Min(1, _player.GetStartLevel());
+
+        if (_levelFishStreak >= _highLevelFishStreak)
+        {
+            _levelFishStreak = 0;
+            
+            return Random.Range(firstLevel, playerLevel + 1);
+        }
+
         int levelStep = Random.Range(firstLevel, playerLevel + 10);
+        int generatedLevel;
 
         if (_previousFishLevel.HasValue && _previousFishLevel.Value < playerLevel)
         {
-            return Mathf.Min(playerLevel + 1, playerLevel + levelStep);
-        }
-
-        float valueForSet = Random.Range(0f, 10f);
-        float halfValue = 9f;
-
-        if (valueForSet <= halfValue)
-        {
-            return Random.Range(firstLevel, playerLevel + levelStep);
+            generatedLevel = Mathf.Min(playerLevel + 1, playerLevel + levelStep);
         }
         else
         {
-            return playerLevel;
+            float valueForSet = Random.Range(0f, 10f);
+            float halfValue = 9f;
+
+            if (valueForSet <= halfValue)
+            {
+                generatedLevel = Random.Range(firstLevel, playerLevel + levelStep);
+            }
+            else
+            {
+                generatedLevel = playerLevel;
+            }
         }
+
+        if (generatedLevel > playerLevel)
+            _levelFishStreak++;
+        else
+            _levelFishStreak = 0;
+
+        return generatedLevel;
     }
 
     private int GetValidSpawnPointIndex()
@@ -96,8 +114,7 @@ public class Spawner : MonoBehaviour
 
         for (int attempt = 0; attempt < maxAttempts; attempt++)
         {
-            int index = Random.Range(1, _spawnPoints.Length);  
-
+            int index = Random.Range(1, _spawnPoints.Length);
             if (index == _previousSpawnIndex)
                 continue;
 

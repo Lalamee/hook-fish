@@ -4794,7 +4794,7 @@ MonoBehaviour:
   _fishPrefabs:
   - {fileID: 9042627746069258380, guid: 0ae11ea9408312d41a6cb8e49617b8d0, type: 3}
   - {fileID: 5155762770936869054, guid: 782ca720f2dc2774c9f798cc4ed10221, type: 3}
-  _secondsBetweenSpawn: 1
+  _secondsBetweenSpawn: 0.7
 --- !u!1 &2545411520297342073
 GameObject:
   m_ObjectHideFlags: 0
