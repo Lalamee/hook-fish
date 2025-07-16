@@ -1,8 +1,11 @@
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(FishingZone))]
 public class FishingStoper : MonoBehaviour
 {
+    public static event Action OnFishingStop;
+
     private Player _player;
     private BoatMover _boat;
     private HarpoonControl _harpoon;
@@ -21,7 +24,7 @@ public class FishingStoper : MonoBehaviour
     }
 
     private void Update()
-    { 
+    {
         _countTrappedFish = _player.GetCountTrappedFish();
 
         if (_countTrappedFish == _needCountFish)
@@ -30,12 +33,15 @@ public class FishingStoper : MonoBehaviour
 
     private void StopFishing()
     {
-        Destroy(gameObject);
+        OnFishingStop?.Invoke(); 
+
         _laser.OffRenderer();
         _player.SetNewStartLevel();
         _player.ResetCountTrappedFish();
         _boat.enabled = true;
         _harpoon.enabled = false;
         _hook.enabled = false;
+
+        Destroy(gameObject);
     }
 }
