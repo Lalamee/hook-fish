@@ -1636,6 +1636,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 5937414706002826770}
+    - target: {fileID: 4329027422834061044, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadRandomScene
+      objectReference: {fileID: 0}
     - target: {fileID: 4607140744897185042, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_SizeDelta.x
       value: 430
