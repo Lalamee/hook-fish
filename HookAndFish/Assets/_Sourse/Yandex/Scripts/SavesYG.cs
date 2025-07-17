@@ -4,6 +4,7 @@ namespace YG
     {
 		public int playerLevel = 1;
         public int currentLevel = 2;
-        
+        public float volume = 0.5f;
+
     }
 }
