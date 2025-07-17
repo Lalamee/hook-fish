@@ -13,8 +13,8 @@ public class AudioSetting : MonoBehaviour
 
     [Header("Icons for volume state")]
     [SerializeField] private Image _iconImage;
-    [SerializeField] private Sprite _spriteOn;   // Иконка звук включён
-    [SerializeField] private Sprite _spriteOff;  // Иконка звук выключен
+    [SerializeField] private Sprite _spriteOn;  
+    [SerializeField] private Sprite _spriteOff;  
 
     private const float MinVolumeThreshold = 0.01f;
     private bool _internalToggleChange = false;
