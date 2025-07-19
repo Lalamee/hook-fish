@@ -1,9 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Fish))]
+[RequireComponent(typeof(AudioClipChosen ))]
 public class FishLevelTransmitter : MonoBehaviour
 {
     [SerializeField] private Fish _fish;
+    [SerializeField] private AudioClipChosen _audioClipChosen;
+    
     private Player _player;
     private LevelFinisher _levelFinisher;
 
@@ -19,10 +22,12 @@ public class FishLevelTransmitter : MonoBehaviour
         if (_player.IsPlayerLevelMore(_fish.Level))
         {
             _player.CatchFish(_fish.Level);
-            Destroy(_fish.gameObject);
+            _audioClipChosen.PlayGoodAudio();
+                Destroy(_fish.gameObject);
         }
         else
         {
+            _audioClipChosen.PlayGoodAudio();
             _levelFinisher.BadEnd();
         }
     }
