@@ -19,4 +19,11 @@ public class AudioClipChosen : MonoBehaviour
         _audioSource.clip = badEndClip;
         _audioSource.Play();
     }
+    
+    public void PlayGoodAudioInPlace()
+    {
+        Camera mainCamera = Camera.main;
+        Vector3 playPosition = mainCamera.transform.position;
+        AudioSource.PlayClipAtPoint(goodEndClip, playPosition);
+    }
 }

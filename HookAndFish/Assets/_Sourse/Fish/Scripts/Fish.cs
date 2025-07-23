@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private ParticleSystem _particleEnd;
+    [SerializeField] private ParticleSystem _particleCatch;
 
     public event Action<int> LevelSet;
 
@@ -27,11 +28,21 @@ public class Fish : MonoBehaviour
 
     private void PlayFX()
     {
-        if (_particleSystem != null)
+        if (_particleEnd != null)
         {
-            _particleSystem.gameObject.SetActive(true);
-            _particleSystem.transform.parent = null;
-            _particleSystem.Play();
+            _particleEnd.gameObject.SetActive(true);
+            _particleEnd.transform.parent = null;
+            _particleEnd.Play();
+        }
+    }
+
+    public void PlayCatchFX()
+    {
+        if (_particleCatch != null)
+        {
+            _particleCatch.gameObject.SetActive(true);
+            _particleCatch.transform.parent = null;
+            _particleCatch.Play();
         }
     }
 }

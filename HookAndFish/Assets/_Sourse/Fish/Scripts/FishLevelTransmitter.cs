@@ -12,7 +12,6 @@ public class FishLevelTransmitter : MonoBehaviour
 
     private void Start()
     {
-        _fish = GetComponent<Fish>();
         _player = FindObjectOfType<Player>();
         _levelFinisher = FindObjectOfType<LevelFinisher>();
     }
@@ -21,13 +20,14 @@ public class FishLevelTransmitter : MonoBehaviour
     {
         if (_player.IsPlayerLevelMore(_fish.Level))
         {
+            _fish.PlayCatchFX();
+            _audioClipChosen.PlayGoodAudioInPlace();
             _player.CatchFish(_fish.Level);
-            _audioClipChosen.PlayGoodAudio();
-                Destroy(_fish.gameObject);
+            Destroy(_fish.gameObject);
         }
         else
         {
-            _audioClipChosen.PlayGoodAudio();
+            _audioClipChosen.PlayBadAudio();
             _levelFinisher.BadEnd();
         }
     }
