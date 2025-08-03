@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using IJunior.TypedScenes;
@@ -19,6 +20,7 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
     public void RestartThisLevel()
     {
+        YG2.InterstitialAdvShow();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
