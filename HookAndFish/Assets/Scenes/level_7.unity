@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Flat_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1723343564497655953, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2063030691396239915, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.13451
@@ -199,7 +203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &338353647
 Transform:
@@ -283,6 +287,10 @@ PrefabInstance:
     - target: {fileID: 5018948784153712234, guid: 1a0b26e2dacecb947b41cf32c3265212, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Coral_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018948784153712234, guid: 1a0b26e2dacecb947b41cf32c3265212, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5687259076827548880, guid: 1a0b26e2dacecb947b41cf32c3265212, type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 3337259793420143139, guid: 9d5af34c6c141ad498daa5546b8b447a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Coral_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337259793420143139, guid: 9d5af34c6c141ad498daa5546b8b447a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -599,6 +611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Flat_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1723343564497655953, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2063030691396239915, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.261818
@@ -784,6 +800,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 338353647}
     m_Modifications:
+    - target: {fileID: 823164784297057687, guid: 9b088cd19faafeb4cbaf2865af9da452, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287979994051814225, guid: 9b088cd19faafeb4cbaf2865af9da452, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4711759793326767689, guid: 9b088cd19faafeb4cbaf2865af9da452, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.359661
@@ -828,6 +852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_GiantClam_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5343617981027312883, guid: 9b088cd19faafeb4cbaf2865af9da452, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -849,6 +877,10 @@ PrefabInstance:
     - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Volcano_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 951188082755228427, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1104,6 +1136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Coral_05
       objectReference: {fileID: 0}
+    - target: {fileID: 8056484844401101012, guid: e3d346b4f05ebff4094e195fd0c56357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1230,6 +1266,10 @@ PrefabInstance:
     - target: {fileID: 8304186660166757170, guid: d723b19c8141fd442a25971db98100f7, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Coral_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304186660166757170, guid: d723b19c8141fd442a25971db98100f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8680043321574732168, guid: d723b19c8141fd442a25971db98100f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1364,6 +1404,10 @@ PrefabInstance:
     - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Volcano_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 951188082755228427, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1514,6 +1558,10 @@ PrefabInstance:
     - target: {fileID: 362496489379886822, guid: f7893c8e664f07e46a5977ba2d3f1fd8, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Starfish_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 362496489379886822, guid: f7893c8e664f07e46a5977ba2d3f1fd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030207272785030236, guid: f7893c8e664f07e46a5977ba2d3f1fd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1682,6 +1730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Coral_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1836246449870361477, guid: 4e3d870a7aa0af84cabc33908bf52ba8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1743,6 +1795,10 @@ PrefabInstance:
     - target: {fileID: 1074073387935433415, guid: 544f810892400994991d399dbe25a0f9, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Coral_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1074073387935433415, guid: 544f810892400994991d399dbe25a0f9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6467388601554043688, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -196,6 +200,10 @@ PrefabInstance:
     - target: {fileID: 3993003632129020523, guid: 63e5a2ee6db40014080468e07e51cebd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Arch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993003632129020523, guid: 63e5a2ee6db40014080468e07e51cebd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4333077508750919889, guid: 63e5a2ee6db40014080468e07e51cebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -259,6 +267,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_04
       objectReference: {fileID: 0}
+    - target: {fileID: 146025179204021752, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 590586113432378460, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 670220012594116418, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.660519
@@ -299,6 +315,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3161816125525391101, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898082669190179184, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -320,6 +344,10 @@ PrefabInstance:
     - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,6 +389,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4329232657641608328, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806147224418807594, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221595450739942153, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620562238737871567, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562727018980229169, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -385,7 +433,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &388500079
 Transform:
@@ -460,9 +508,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 624528888}
     m_Modifications:
+    - target: {fileID: 120834564724009036, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 829824385733751725, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419470168489983874, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7030940628132927313, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030940628132927313, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7699250542291832299, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -526,6 +590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.937502
@@ -566,6 +634,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4329232657641608328, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806147224418807594, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221595450739942153, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620562238737871567, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562727018980229169, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -590,7 +678,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &624528888
 Transform:
@@ -678,6 +766,10 @@ PrefabInstance:
     - target: {fileID: 3005644128467938717, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
       propertyPath: m_Name
       value: SM_Env_Pile_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005644128467938717, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -826,6 +918,10 @@ PrefabInstance:
     - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Cliff_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3078488538800522720, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1017,9 +1113,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082374040}
     m_Modifications:
+    - target: {fileID: 120834564724009036, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 829824385733751725, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419470168489983874, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7030940628132927313, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030940628132927313, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7699250542291832299, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1123,6 +1235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Column_01
       objectReference: {fileID: 0}
+    - target: {fileID: 916115565686720363, guid: 49c1bc25c0f99f6449c9b06424b2fa75, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1144,6 +1260,10 @@ PrefabInstance:
     - target: {fileID: 5823993295851167110, guid: b4da6d6d52ce807488ef323a341c7c85, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Spikes_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823993295851167110, guid: b4da6d6d52ce807488ef323a341c7c85, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6600354725949294396, guid: b4da6d6d52ce807488ef323a341c7c85, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1247,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Column_01
       objectReference: {fileID: 0}
+    - target: {fileID: 916115565686720363, guid: 49c1bc25c0f99f6449c9b06424b2fa75, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1347,6 +1471,10 @@ PrefabInstance:
     - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Cliff_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3078488538800522720, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1579,6 +1707,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082374040}
     m_Modifications:
+    - target: {fileID: 3883622309091526908, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776662837590404264, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5788806807395683009, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.627682
@@ -1623,6 +1759,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6565731153089564795, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322066086735910813, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632991948454380809, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677739428727823105, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1644,6 +1796,14 @@ PrefabInstance:
     - target: {fileID: 146025179204021752, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 146025179204021752, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 590586113432378460, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 670220012594116418, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1685,6 +1845,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3161816125525391101, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898082669190179184, guid: 08b24fb13261ca34890d8b7e0cd1703f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1706,6 +1874,10 @@ PrefabInstance:
     - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1746,6 +1918,26 @@ PrefabInstance:
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329232657641608328, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806147224418807594, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221595450739942153, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620562238737871567, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562727018980229169, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1808,6 +2000,10 @@ PrefabInstance:
     - target: {fileID: 6467388601554043688, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467388601554043688, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1968,6 +2164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.817982
@@ -2007,6 +2207,26 @@ PrefabInstance:
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329232657641608328, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806147224418807594, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221595450739942153, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620562238737871567, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562727018980229169, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2179,6 +2399,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 624528888}
     m_Modifications:
+    - target: {fileID: 3883622309091526908, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776662837590404264, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5788806807395683009, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.627682
@@ -2222,6 +2450,22 @@ PrefabInstance:
     - target: {fileID: 6565731153089564795, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565731153089564795, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322066086735910813, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632991948454380809, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677739428727823105, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2297,6 +2541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Pile_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3005644128467938717, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2321,7 +2569,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2082374040
 Transform:

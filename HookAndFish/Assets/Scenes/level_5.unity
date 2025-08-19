@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Barrel_Broken_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8496072197192088756, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9125361616140150286, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.74451
@@ -494,6 +498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Barrel_Broken_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8496072197192088756, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9125361616140150286, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.238056
@@ -555,6 +563,10 @@ PrefabInstance:
     - target: {fileID: 8496072197192088756, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Barrel_Broken_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496072197192088756, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9125361616140150286, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,6 +669,10 @@ PrefabInstance:
     - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
       propertyPath: m_Name
       value: SM_Prop_ShipWreck_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1067,6 +1083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Raft_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1470890920812347179, guid: 98e381a479096ea4e88937876032497d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2243487313796375953, guid: 98e381a479096ea4e88937876032497d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.631256
@@ -1203,7 +1223,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1837800443
 Transform:
@@ -1239,6 +1259,10 @@ PrefabInstance:
     - target: {fileID: 7115819658426638307, guid: 4af5d8d0985d215499d9688352f2da12, type: 3}
       propertyPath: m_Name
       value: SM_Prop_PirateFlag_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115819658426638307, guid: 4af5d8d0985d215499d9688352f2da12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7605358125850461529, guid: 4af5d8d0985d215499d9688352f2da12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1390,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Barrel_Broken_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8496072197192088756, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9125361616140150286, guid: db662c8f996c1b74ba0e09c8410a2c2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.1845093
@@ -1491,6 +1519,10 @@ PrefabInstance:
     - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
       propertyPath: m_Name
       value: SM_Prop_ShipWreck_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

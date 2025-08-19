@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Wall_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2366730234514733260, guid: e3ea158659b6722469185db4dce5c885, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3139994340023935606, guid: e3ea158659b6722469185db4dce5c885, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5654898
@@ -196,6 +200,10 @@ PrefabInstance:
     - target: {fileID: 5108243955345646515, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108243955345646515, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5597957279540951305, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -556,6 +564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5108243955345646515, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5597957279540951305, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.49451
@@ -670,6 +682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6467388601554043688, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -778,7 +794,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1418371441
 Transform:
@@ -1387,7 +1403,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &756383587254992444
 MeshFilter:
@@ -1456,7 +1472,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &1481214601597024034
 GameObject:
@@ -1474,7 +1490,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1512919537651483006
 Transform:
@@ -1507,7 +1523,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &2544854679246343899
 MeshFilter:
@@ -1750,7 +1766,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &4418204988927613735
 GameObject:
@@ -1768,7 +1784,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &4792465429959495375
 PrefabInstance:
@@ -2130,7 +2146,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &5560399108381524968
 GameObject:
@@ -2148,7 +2164,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &5664892926832972992
 MeshFilter:
@@ -2203,7 +2219,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &6580381146774123810
 MeshFilter:

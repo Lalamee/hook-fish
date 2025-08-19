@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6467388601554043688, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -199,7 +203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &338353647
 Transform:
@@ -277,6 +281,10 @@ PrefabInstance:
     - target: {fileID: 2366730234514733260, guid: e3ea158659b6722469185db4dce5c885, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Ruins_Wall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366730234514733260, guid: e3ea158659b6722469185db4dce5c885, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3139994340023935606, guid: e3ea158659b6722469185db4dce5c885, type: 3}
       propertyPath: m_LocalPosition.x
@@ -658,6 +666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Giant_Column_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3277317438105620452, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.62549
@@ -760,6 +772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Column_01
       objectReference: {fileID: 0}
+    - target: {fileID: 916115565686720363, guid: 49c1bc25c0f99f6449c9b06424b2fa75, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -781,6 +797,10 @@ PrefabInstance:
     - target: {fileID: 3783172376195406270, guid: 25cbb7cd007b1f141807d65eee830da8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Monolith_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783172376195406270, guid: 25cbb7cd007b1f141807d65eee830da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4596864154966606596, guid: 25cbb7cd007b1f141807d65eee830da8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -995,6 +1015,10 @@ PrefabInstance:
     - target: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Giant_Column_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3277317438105620452, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
       propertyPath: m_LocalPosition.x
