@@ -1,2 +1,6 @@
 ExampleYG2
+Authorization
+InterstitialAdv
+Leaderboards
 Localization
+Storage
