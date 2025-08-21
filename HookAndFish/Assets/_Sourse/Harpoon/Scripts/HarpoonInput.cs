@@ -52,7 +52,7 @@ public partial class @HarpoonInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""7e93903d-b4b5-4465-9f03-592a2c1c5ca5"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""path"": ""<Touchscreen>/delta/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Android"",
@@ -63,7 +63,7 @@ public partial class @HarpoonInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""3c12b8c4-1d01-4852-8695-7d4acc6b4268"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""path"": ""<Touchscreen>/delta/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Android"",
