@@ -13,6 +13,7 @@ public class LevelPerSession : MonoBehaviour
         _languageText.baseText = '+' + _player.GetLevel().ToString() + " ";
         
         YG2.saves.playerLevel += _player.GetLevel();
+        YG2.SetLeaderboard("stats",  YG2.saves.playerLevel);
 
     }
 }
