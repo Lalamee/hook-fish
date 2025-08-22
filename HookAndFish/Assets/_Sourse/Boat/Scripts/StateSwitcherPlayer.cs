@@ -4,24 +4,15 @@ using UnityEngine;
 public class StateSwitcherPlayer : MonoBehaviour
 {
     [SerializeField] private BoatMover _boatMover;
+    [SerializeField] private HarpoonControl _harpoonControl;
+    [SerializeField] private Laser _laser;
+    [SerializeField] private Hook _hook;
     
-    private HarpoonControl _harpoonControl;
-    private Laser _laser;
-    private Hook _hook;
     private Vector3 _targetPosition;
     private float rotationSpeed = 5f;
     private float moveSpeed = 5f; 
     private bool _isProcessing = false;
-
-    private void Start()
-    {
-        _boatMover = GetComponent<BoatMover>();
-
-        _harpoonControl = FindObjectOfType<HarpoonControl>();
-        _hook = FindObjectOfType<Hook>();
-        _laser = FindObjectOfType<Laser>();
-    }
-
+    
     private void Update()
     {
         if (_isProcessing)

@@ -5,7 +5,9 @@ public class Boat : MonoBehaviour
 {
     [SerializeField] private LevelFinisher _levelFinisher;
     [SerializeField] private BoatMover _boatMover;
-
+    [SerializeField] private ParticleSystem _motorSplashFx;
+    
+    private float _arriveDistance = 0.25f; 
     private List<AreaForBoat> _allTargetAreas;
 
     private void Awake()
@@ -17,6 +19,11 @@ public class Boat : MonoBehaviour
     {
         FindAllTargetAreas();
         UpdateNearestTarget();
+    }
+
+    private void OnDisable()
+    {
+        StopMotorFx(true);
     }
 
     private void Update()
@@ -33,10 +40,17 @@ public class Boat : MonoBehaviour
 
     private void UpdateNearestTarget()
     {
+        if (_boatMover == null || !_boatMover.enabled)
+        {
+            StopMotorFx();
+            return;
+        }
+
         _allTargetAreas.RemoveAll(area => area == null);
 
         if (_allTargetAreas.Count == 0)
         {
+            StopMotorFx();
             _levelFinisher.GoodEnd();
             return;
         }
@@ -55,9 +69,27 @@ public class Boat : MonoBehaviour
             }
         }
 
-        if (nearestArea != null)
+        if (nearestArea == null)
         {
-            _boatMover.SetTarget(nearestArea.transform.position);
+            StopMotorFx();
+            return;
         }
+        
+        if (nearestDistance <= _arriveDistance)
+        {
+            StopMotorFx();
+            return;
+        }
+        
+        _boatMover.SetTarget(nearestArea.transform.position);
+        if (_motorSplashFx && !_motorSplashFx.isPlaying)
+            _motorSplashFx.Play();
+    }
+
+    public void StopMotorFx(bool clear = false)
+    {
+        if (_motorSplashFx && _motorSplashFx.isPlaying)
+            _motorSplashFx.Stop(true, clear ? ParticleSystemStopBehavior.StopEmittingAndClear
+                                            : ParticleSystemStopBehavior.StopEmitting);
     }
 }

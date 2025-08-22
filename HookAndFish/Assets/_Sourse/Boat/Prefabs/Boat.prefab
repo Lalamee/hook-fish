@@ -429,6 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelFinisher: {fileID: 1914271296718013164}
   _boatMover: {fileID: 4160785788165843208}
+  _motorSplashFx: {fileID: 2476006717774363100}
 --- !u!114 &4160785788165843208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 12
   _rotationSpeed: 2
-  _particleSystem: {fileID: 2476006717774363100}
 --- !u!114 &630425756083821026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +457,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _boatMover: {fileID: 4160785788165843208}
+  _harpoonControl: {fileID: 3230218896608000766}
+  _laser: {fileID: 8254225335937019386}
+  _hook: {fileID: 8029824127983719147}
 --- !u!114 &1914271296718013164
 MonoBehaviour:
   m_ObjectHideFlags: 0

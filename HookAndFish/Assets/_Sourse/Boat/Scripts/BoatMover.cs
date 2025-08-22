@@ -5,7 +5,6 @@ public class BoatMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _rotationSpeed = 4f;
-    [SerializeField] private ParticleSystem _particleSystem;
 
     private Vector3 _currentTarget;
     private bool _hasTarget = false;
@@ -16,18 +15,6 @@ public class BoatMover : MonoBehaviour
         {
             MoveToTarget(_currentTarget);
         }
-    }
-
-    private void OnEnable()
-    {
-        if (!_particleSystem.isPlaying)
-            _particleSystem.Play();
-    }
-
-    private void OnDisable()
-    {
-        if (_particleSystem.isPlaying)
-            _particleSystem.Stop();
     }
 
     public void SetTarget(Vector3 target)
