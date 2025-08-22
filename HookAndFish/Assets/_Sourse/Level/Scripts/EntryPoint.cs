@@ -4,10 +4,8 @@ using YG;
 
 public class EntryPoint : MonoBehaviour
 {
-
     void Awake()
     {
         YG2.saves.currentLevel = SceneManager.GetActiveScene().buildIndex;        
     }
-
 }

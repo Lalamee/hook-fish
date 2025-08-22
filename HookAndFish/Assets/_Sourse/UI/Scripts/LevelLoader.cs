@@ -9,11 +9,13 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 {
     public void LoadLevel()
     {
+        ResumeTimeAndAudio();
         SceneManager.LoadScene(YG2.saves.currentLevel);
     }
 
     public void LoadMenu()
     {
+        ResumeTimeAndAudio();
         YG2.SaveProgress();
         YG2.InterstitialAdvShow();
         SceneManager.LoadScene(1);
@@ -21,12 +23,14 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
     public void RestartThisLevel()
     {
+        ResumeTimeAndAudio();
         YG2.InterstitialAdvShow();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
     public void OnSceneLoaded(int argument)
     {
+        if (argument == 1) ResumeTimeAndAudio();
         SceneManager.LoadScene(argument);
     }
 
@@ -97,5 +101,11 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
         YG2.SaveProgress();
         SceneManager.LoadScene(nextBuildIndex);
+    }
+    
+    private void ResumeTimeAndAudio()
+    {
+        if (Time.timeScale != 1f) 
+            Time.timeScale = 1f;
     }
 }

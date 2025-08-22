@@ -35,6 +35,7 @@ public class Rope : MonoBehaviour
         if (_hook == null || _harpoon == null || _hookScript == null)
         {
             _lineRenderer.enabled = false;
+            
             return;
         }
         

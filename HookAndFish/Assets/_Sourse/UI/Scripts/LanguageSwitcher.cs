@@ -54,6 +54,7 @@ public class LanguageSwitcher : MonoBehaviour
                 lastAddedText = " " + en;
                 break;
         }
+        
         textComponent.text = baseText + lastAddedText;
     }
 }

@@ -43,6 +43,7 @@ public class Boat : MonoBehaviour
         if (_boatMover == null || !_boatMover.enabled)
         {
             StopMotorFx();
+            
             return;
         }
 
@@ -52,6 +53,7 @@ public class Boat : MonoBehaviour
         {
             StopMotorFx();
             _levelFinisher.GoodEnd();
+            
             return;
         }
 
@@ -62,6 +64,7 @@ public class Boat : MonoBehaviour
         foreach (AreaForBoat area in _allTargetAreas)
         {
             float distance = Vector3.Distance(currentPosition, area.transform.position);
+            
             if (distance < nearestDistance)
             {
                 nearestDistance = distance;
@@ -72,16 +75,19 @@ public class Boat : MonoBehaviour
         if (nearestArea == null)
         {
             StopMotorFx();
+            
             return;
         }
         
         if (nearestDistance <= _arriveDistance)
         {
             StopMotorFx();
+            
             return;
         }
         
         _boatMover.SetTarget(nearestArea.transform.position);
+        
         if (_motorSplashFx && !_motorSplashFx.isPlaying)
             _motorSplashFx.Play();
     }

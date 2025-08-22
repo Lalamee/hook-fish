@@ -68,8 +68,7 @@ public class IKControl : MonoBehaviour
 
         if (toEffector.sqrMagnitude < 0.0001f || toTarget.sqrMagnitude < 0.0001f)
             return;
-
-        // вычисляем вращение, переводя вектор toEffector → toTarget
+        
         Quaternion rot = Quaternion.FromToRotation(toEffector, toTarget);
         joint.rotation = rot * joint.rotation;
     }

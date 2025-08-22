@@ -6,6 +6,7 @@ public class FishLevel : MonoBehaviour
 {
     [SerializeField] private Fish _fish;
     [SerializeField] private LanguageSwitcher _languageText;
+    
     private void OnEnable()
     {
         _fish.LevelSet += OnLevelSet;
