@@ -1,23 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;   // ← добавили
 using YG;
 
-public class AudioSetting : MonoBehaviour
+public class AudioSetting : MonoBehaviour, IPointerUpHandler, IEndDragHandler
 {
     [SerializeField] private AudioMixerGroup _mixer;
     [SerializeField] private string _parameter = "MasterVolume";
-
     [SerializeField] private Slider _volumeSlider;
     [SerializeField] private Toggle _muteToggle;
-
-    [Header("Icons for volume state")]
     [SerializeField] private Image _iconImage;
-    [SerializeField] private Sprite _spriteOn;  
-    [SerializeField] private Sprite _spriteOff;  
+    [SerializeField] private Sprite _spriteOn;
+    [SerializeField] private Sprite _spriteOff;
+    [SerializeField] private AudioSource _audioSource;  
 
     private const float MinVolumeThreshold = 0.01f;
     private bool _internalToggleChange = false;
+    private float _lastPlayTime = -1f;                  
 
     private void Start()
     {
@@ -28,9 +28,7 @@ public class AudioSetting : MonoBehaviour
         }
 
         if (_muteToggle != null)
-        {
             _muteToggle.onValueChanged.AddListener(OnMuteToggled);
-        }
     }
 
     private void OnVolumeChanged(float value)
@@ -52,26 +50,19 @@ public class AudioSetting : MonoBehaviour
 
     private void OnMuteToggled(bool isMuted)
     {
-        if (_internalToggleChange)
-            return; 
+        if (_internalToggleChange) return;
 
         if (isMuted)
         {
             ApplyVolume(0f, true);
-            
-            if (_volumeSlider != null)
-                _volumeSlider.SetValueWithoutNotify(0f);
-            
+            if (_volumeSlider != null) _volumeSlider.SetValueWithoutNotify(0f);
             UpdateIcon(0f);
         }
         else
         {
             float restoreVolume = 0.5f;
             ApplyVolume(restoreVolume, false);
-            if (_volumeSlider != null)
-            {
-                _volumeSlider.SetValueWithoutNotify(restoreVolume);
-            }
+            if (_volumeSlider != null) _volumeSlider.SetValueWithoutNotify(restoreVolume);
             UpdateIcon(restoreVolume);
         }
     }
@@ -80,14 +71,27 @@ public class AudioSetting : MonoBehaviour
     {
         float volumeDb = isMuted ? -80f : Mathf.Log10(Mathf.Max(value, 0.0001f)) * 20f;
         _mixer.audioMixer.SetFloat(_parameter, volumeDb);
-        
         YG2.saves.volume = volumeDb;
     }
 
     private void UpdateIcon(float volumeValue)
     {
         if (_iconImage == null || _spriteOn == null || _spriteOff == null) return;
-
         _iconImage.sprite = (volumeValue <= MinVolumeThreshold) ? _spriteOff : _spriteOn;
+    }
+
+    // ---- Срабатывает только при отпускании ----
+    public void OnPointerUp(PointerEventData eventData) => PlayReleaseSound();
+    public void OnEndDrag(PointerEventData eventData)   => PlayReleaseSound();
+
+    private void PlayReleaseSound()
+    {
+        if (_audioSource == null) return;
+
+        // защита от двойного вызова (PointerUp + EndDrag в один кадр)
+        if (Time.unscaledTime - _lastPlayTime < 0.05f) return;
+
+        if (!_audioSource.isPlaying) _audioSource.Play();
+        _lastPlayTime = Time.unscaledTime;
     }
 }

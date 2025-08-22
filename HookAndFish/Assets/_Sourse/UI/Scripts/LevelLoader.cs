@@ -31,7 +31,9 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(YG2.saves.currentLevel + 1);
+        YG2.saves.currentLevel++;
+        YG2.InterstitialAdvShow();
+        SceneManager.LoadScene(YG2.saves.currentLevel);
     }
 
 }

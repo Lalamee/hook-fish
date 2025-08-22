@@ -32,6 +32,9 @@ public class Hook : MonoBehaviour
 
     private void Update()
     {
+        if (GameUI.IsOpen)
+            return;
+        
         if (Input.GetMouseButtonUp(0) && !_isMoving && !_isReturning)
         {
             _initialPosition = transform.position;
