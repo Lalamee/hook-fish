@@ -1109,9 +1109,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 6212239405117688621, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914049152810843356, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914049152810843356, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_fontSize
+      value: 63.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6941412965932841415, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Name
       value: Level UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263615960465407457, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

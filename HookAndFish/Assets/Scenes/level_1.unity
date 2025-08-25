@@ -1552,6 +1552,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3152614076211794765, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.66
@@ -1595,6 +1607,22 @@ PrefabInstance:
     - target: {fileID: 7673341352081217108, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: m_Name
       value: Fishing Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 9101868980452304739, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: _player
