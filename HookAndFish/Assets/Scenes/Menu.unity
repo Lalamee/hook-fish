@@ -684,7 +684,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450995709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -692,7 +692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5, y: 150}
+  m_AnchoredPosition: {x: -0.5, y: 225}
   m_SizeDelta: {x: 599, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450995711
@@ -4065,6 +4065,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2004406847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4132358835358047080, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
+  m_PrefabInstance: {fileID: 896025535957495844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2079173592
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,7 +4412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5, y: -250}
+  m_AnchoredPosition: {x: -0.5, y: -180}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2099877862
@@ -4431,7 +4436,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 375, y: 150}
-  m_Spacing: {x: 0, y: 60}
+  m_Spacing: {x: 0, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &2108242054
@@ -4674,16 +4679,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: My LB Example
       objectReference: {fileID: 0}
+    - target: {fileID: 8070523932202349962, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
+      propertyPath: nameLB
+      value: test
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4132358835358047080, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1705290335665137893}
   m_SourcePrefab: {fileID: 100100000, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
 --- !u!224 &1705290335665137890 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 575593987708208805, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
   m_PrefabInstance: {fileID: 896025535957495844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1705290335665137893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004406847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3701015406859225127
 GameObject:
   m_ObjectHideFlags: 0

@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level_20.unity
     guid: 973607c15a0456c4587d23aa61a45303
+  - enabled: 1
+    path: Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_Advanced.unity
+    guid: a5f7a56d339da84449899ecf95fbe33d
   m_configObjects: {}

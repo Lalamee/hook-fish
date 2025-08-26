@@ -754,9 +754,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 6212239405117688621, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6941412965932841415, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Name
       value: Level UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263615960465407457, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -989,7 +997,7 @@ Transform:
   m_GameObject: {fileID: 1287707374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -19.2, y: 0, z: 24.9}
   m_LocalScale: {x: 15, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1278,7 +1286,7 @@ Transform:
   m_GameObject: {fileID: 1455650612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: -19.2, y: -5, z: 24.9}
   m_LocalScale: {x: 150, y: 1, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1552,18 +1560,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218337087447894326, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3152614076211794765, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.66
@@ -1607,22 +1603,6 @@ PrefabInstance:
     - target: {fileID: 7673341352081217108, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: m_Name
       value: Fishing Zone
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832913174576443992, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 9101868980452304739, guid: b626912b315ed4949a6756e0e28aacc1, type: 3}
       propertyPath: _player
