@@ -4672,11 +4672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132358835358047080, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
       propertyPath: m_Name
-      value: LB Example
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070523932202349962, guid: fb39f0271786db24ba2f4ea804d7781d, type: 3}
-      propertyPath: nameLB
-      value: stats
+      value: My LB Example
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

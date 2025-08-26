@@ -17,7 +17,6 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
     {
         Time.timeScale = 1f;
         YG2.SaveProgress();
-        YG2.InterstitialAdvShow();
         SceneManager.LoadScene(1);
     }
 
