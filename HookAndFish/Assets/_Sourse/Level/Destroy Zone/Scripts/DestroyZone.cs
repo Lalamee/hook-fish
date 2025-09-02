@@ -6,7 +6,7 @@ public class DestroyZone : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Fish fish))
         {
-            Destroy(collision.gameObject);
+            fish.DestroyMe();
         }
     }
 }

@@ -1875,10 +1875,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_02
       objectReference: {fileID: 0}
-    - target: {fileID: 2754804363269165765, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.817982
@@ -1918,26 +1914,6 @@ PrefabInstance:
     - target: {fileID: 3274353691601832063, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329232657641608328, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806147224418807594, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221595450739942153, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6620562238737871567, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7562727018980229169, guid: f50eccb0ebdc48f41b7c67ffa0f2ea5b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2399,14 +2375,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 624528888}
     m_Modifications:
-    - target: {fileID: 3883622309091526908, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776662837590404264, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5788806807395683009, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.627682
@@ -2450,22 +2418,6 @@ PrefabInstance:
     - target: {fileID: 6565731153089564795, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6565731153089564795, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7322066086735910813, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632991948454380809, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7677739428727823105, guid: 9d13b99ba0d33a54dbc8d64d1ce7965d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

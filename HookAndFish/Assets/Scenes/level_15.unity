@@ -1321,17 +1321,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1196000210}
     m_Modifications:
-    - target: {fileID: 1592699732610457292, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2696696122112371711, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
       propertyPath: m_Name
       value: SM_Env_Bush_Palm_03
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696696122112371711, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3325704336467439941, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1372,14 +1364,6 @@ PrefabInstance:
     - target: {fileID: 3325704336467439941, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3464577527257936416, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 9178289771531809013, guid: 887957cac83ae2749b1d416ba53e8ed7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -42,7 +42,6 @@ public class Hook : MonoBehaviour
 
             _laser.OffRenderer();
             _harpoonControl.LockMovement();
-
             StartCoroutine(ReturnTimerCoroutine());
         }
 

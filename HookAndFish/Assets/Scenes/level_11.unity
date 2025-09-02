@@ -244,17 +244,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14194083}
     m_Modifications:
-    - target: {fileID: 2667271309578618258, guid: c20901c620526b94a98e894c393f1e41, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6160381818469031261, guid: c20901c620526b94a98e894c393f1e41, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Whale_Skeleton_Skull_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6160381818469031261, guid: c20901c620526b94a98e894c393f1e41, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6788545539377940455, guid: c20901c620526b94a98e894c393f1e41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1181,14 +1173,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 14194083}
     m_Modifications:
-    - target: {fileID: 4522138766834212868, guid: 0db8729a32afeb041ad51495ff9cbe7d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991176507931045743, guid: 0db8729a32afeb041ad51495ff9cbe7d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 9036391545818630766, guid: 0db8729a32afeb041ad51495ff9cbe7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.054508
@@ -1232,10 +1216,6 @@ PrefabInstance:
     - target: {fileID: 9036391545818630767, guid: 0db8729a32afeb041ad51495ff9cbe7d, type: 3}
       propertyPath: m_Name
       value: SM_Veh_Canoe_Animated
-      objectReference: {fileID: 0}
-    - target: {fileID: 9036391545818630767, guid: 0db8729a32afeb041ad51495ff9cbe7d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1324,10 +1304,6 @@ PrefabInstance:
     - target: {fileID: 2356300606596153871, guid: 23e16c5f97d3481479d565ed9c8f46c4, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Whale_Skeleton_Ribcage_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2356300606596153871, guid: 23e16c5f97d3481479d565ed9c8f46c4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3168443169255970997, guid: 23e16c5f97d3481479d565ed9c8f46c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2176,14 +2152,6 @@ PrefabInstance:
     - target: {fileID: 2045218920533098706, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
       propertyPath: m_Name
       value: SM_Veh_Outrigger_Canoe_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045218920533098706, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874701313028165561, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

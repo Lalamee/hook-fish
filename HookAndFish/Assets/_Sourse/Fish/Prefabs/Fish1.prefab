@@ -213,7 +213,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 368d145e2d90d004dbdb997a41e4d4fc, type: 2}
+  - {fileID: 2100000, guid: f20ddd3657db7754a84e479abf342f61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -705,8 +705,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.54810464, y: 2.554835, z: 4.6644645}
-  m_Center: {x: -3.0307326, y: 0.332959, z: 0.8976263}
+  m_Size: {x: 0.4, y: 2.55, z: 3.9}
+  m_Center: {x: -3.2, y: 0.19999999, z: 0.5}
 --- !u!54 &-222689081972862429
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -767,6 +767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7791834fe241d294784ded46be93d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fishMover: {fileID: 1035686981075178046}
+  _skinnedMeshRenderer: {fileID: 7904938592692726730}
   _particleEnd: {fileID: 1774286878574074674}
   _particleCatch: {fileID: 720966215126840442}
 --- !u!114 &5728583925156563328
@@ -1000,6 +1002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleBlastBigUnderwater
       objectReference: {fileID: 0}
+    - target: {fileID: 1473089736959414, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4249512045346576, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -1039,6 +1045,34 @@ PrefabInstance:
     - target: {fileID: 4249512045346576, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198287895709316544, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198507318198449734, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198779045339133566, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198834140286737150, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198835695812831550, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198835695812831550, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198835695812831550, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -20,10 +20,9 @@ public class FishLevelTransmitter : MonoBehaviour
     {
         if (_player.IsPlayerLevelMore(_fish.Level))
         {
-            _fish.PlayCatchFX();
             _audioClipChosen.PlayGoodAudioInPlace();
             _player.CatchFish(_fish.Level);
-            Destroy(_fish.gameObject);
+            _fish.CatchMe();
         }
         else
         {

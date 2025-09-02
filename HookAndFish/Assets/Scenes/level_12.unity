@@ -201,10 +201,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Archway_02
       objectReference: {fileID: 0}
-    - target: {fileID: 5108243955345646515, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5597957279540951305, guid: f06a8c0d2206f2f47870941f1a79927d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35.964508
@@ -1575,7 +1571,6 @@ GameObject:
   - component: {fileID: 3139473271172054144}
   - component: {fileID: 756383587254992444}
   - component: {fileID: 8763617003435809272}
-  - component: {fileID: 3906749323028482797}
   m_Layer: 0
   m_Name: SM_Prop_Whale_Skeleton_01_Fin_02
   m_TagString: Untagged
@@ -1829,28 +1824,6 @@ Transform:
   - {fileID: 6937738847217670893}
   m_Father: {fileID: 1418371441}
   m_LocalEulerAnglesHint: {x: -4.27, y: 11.59, z: 25.76}
---- !u!64 &3906749323028482797
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284744932992815053}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5774617806432985235, guid: 86a101ad4d3b47a40b754935acfae1bc, type: 2}
 --- !u!33 &3955960781485550698
 MeshFilter:
   m_ObjectHideFlags: 0

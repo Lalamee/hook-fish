@@ -197,17 +197,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1837800443}
     m_Modifications:
-    - target: {fileID: 497172107670121252, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1582025064182422265, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Whale_Skeleton_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582025064182422265, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2215678405946097731, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -248,14 +240,6 @@ PrefabInstance:
     - target: {fileID: 2215678405946097731, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6445961532491309893, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6642430927013206954, guid: 8005992bf7706d747b4585a797cb786c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -550,10 +534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_ShipWreck_01
       objectReference: {fileID: 0}
-    - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -764,14 +744,6 @@ PrefabInstance:
     - target: {fileID: 2045218920533098706, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
       propertyPath: m_Name
       value: SM_Veh_Outrigger_Canoe_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045218920533098706, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4874701313028165561, guid: 65dda62d80ce41a4fb439fea240a5cfc, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1250,10 +1222,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_PirateFlag_01
       objectReference: {fileID: 0}
-    - target: {fileID: 7115819658426638307, guid: 4af5d8d0985d215499d9688352f2da12, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 7605358125850461529, guid: 4af5d8d0985d215499d9688352f2da12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.62
@@ -1443,10 +1411,6 @@ PrefabInstance:
     - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
       propertyPath: m_Name
       value: SM_Prop_ShipWreck_01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233882492947581745, guid: 70d64cda5673cab479c6bb9ff9ae51a4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

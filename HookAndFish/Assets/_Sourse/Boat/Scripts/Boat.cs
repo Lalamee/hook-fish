@@ -92,7 +92,7 @@ public class Boat : MonoBehaviour
             _motorSplashFx.Play();
     }
 
-    public void StopMotorFx(bool clear = false)
+    private void StopMotorFx(bool clear = false)
     {
         if (_motorSplashFx && _motorSplashFx.isPlaying)
             _motorSplashFx.Stop(true, clear ? ParticleSystemStopBehavior.StopEmittingAndClear

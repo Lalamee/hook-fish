@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 5169191185925584178}
   - component: {fileID: 4160785788165843208}
   - component: {fileID: 630425756083821026}
+  - component: {fileID: 2601267465028526324}
   - component: {fileID: 1914271296718013164}
   m_Layer: 0
   m_Name: Boat
@@ -460,6 +461,22 @@ MonoBehaviour:
   _harpoonControl: {fileID: 3230218896608000766}
   _laser: {fileID: 8254225335937019386}
   _hook: {fileID: 8029824127983719147}
+--- !u!114 &2601267465028526324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276873489621903434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79024b4a5ba92e24c9dbda558c0c2e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boatTransform: {fileID: 810144448506233324}
+  angle: 5
+  duration: 0.4
+  swings: 2
 --- !u!114 &1914271296718013164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,6 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8373d163211ae4d438864082e5a3aa8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boatRocking: {fileID: 2601267465028526324}
   _returnTime: 0.55
   _harpoonTransform: {fileID: 3515435378667195444}
   _harpoonControl: {fileID: 3230218896608000766}

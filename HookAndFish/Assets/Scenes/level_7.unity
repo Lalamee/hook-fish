@@ -720,10 +720,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Flat_02
       objectReference: {fileID: 0}
-    - target: {fileID: 1723343564497655953, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2063030691396239915, guid: d627212fbec51b4458b33bc1e36ac116, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.261818
@@ -1513,10 +1509,6 @@ PrefabInstance:
     - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Volcano_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 466294261634402737, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 951188082755228427, guid: 1b837cc600e88a5439111ce45e2ca0a8, type: 3}
       propertyPath: m_LocalPosition.x

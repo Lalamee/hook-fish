@@ -433,7 +433,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8140291100824400249}
@@ -462,8 +462,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1244342, y: 2.5562205, z: 5.7868667}
-  m_Center: {x: -3.175807, y: 0.19615456, z: 1.0730356}
+  m_Size: {x: 0.4, y: 2.55, z: 5}
+  m_Center: {x: -3.3, y: 0.19999999, z: 0.6}
 --- !u!54 &2543985465497602896
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -524,6 +524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7791834fe241d294784ded46be93d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fishMover: {fileID: 4057893711467153998}
+  _skinnedMeshRenderer: {fileID: 7815225963629517359}
   _particleEnd: {fileID: 2665831724061210374}
   _particleCatch: {fileID: 8710108784281046646}
 --- !u!114 &8824165123790770816
@@ -951,6 +953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleBlastBigUnderwater
       objectReference: {fileID: 0}
+    - target: {fileID: 1473089736959414, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4249512045346576, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -989,6 +995,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4249512045346576, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198287895709316544, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198507318198449734, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198779045339133566, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198834140286737150, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198835695812831550, guid: cb9bf8f7ab7299344a48e3eb96d6a266, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

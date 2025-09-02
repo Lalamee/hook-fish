@@ -649,10 +649,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Ruins_Wall_01
       objectReference: {fileID: 0}
-    - target: {fileID: 2366730234514733260, guid: e3ea158659b6722469185db4dce5c885, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 3139994340023935606, guid: e3ea158659b6722469185db4dce5c885, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.509617

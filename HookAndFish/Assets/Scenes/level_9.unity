@@ -135,10 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Arch_01
       objectReference: {fileID: 0}
-    - target: {fileID: 3993003632129020523, guid: 63e5a2ee6db40014080468e07e51cebd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4333077508750919889, guid: 63e5a2ee6db40014080468e07e51cebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.023777
@@ -991,10 +987,6 @@ PrefabInstance:
     - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Cliff_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2446349253893775194, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3078488538800522720, guid: 593d67be35b76df49a48a4ebc09d0eac, type: 3}
       propertyPath: m_LocalPosition.x
