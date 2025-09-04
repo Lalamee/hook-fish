@@ -16,11 +16,11 @@ public class FishMover : MonoBehaviour
         _boat = FindObjectOfType<Boat>();
         _rotationY = -90f;
         _zero = 0f;
-
+        
         float boatX = _boat.transform.position.x;
         _direction = boatX < transform.position.x ? -1 : 1;
-
-        transform.rotation = Quaternion.Euler(0f, _rotationY * _direction, 0f);
+        
+        transform.localRotation = Quaternion.Euler(0f, _rotationY * _direction, 0f);
     }
 
     private void Update()

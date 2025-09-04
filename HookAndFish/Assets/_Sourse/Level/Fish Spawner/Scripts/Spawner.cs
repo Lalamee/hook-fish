@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
 
         int fishLevel = GenerateFishLevel();
         GameObject fishPrefab = ChooseFishPrefabByLevel(fishLevel);
-        GameObject fishObject = Instantiate(fishPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject fishObject = Instantiate(fishPrefab, spawnPoint, false);
         fishObject.transform.parent = spawnPoint;
 
         Fish fish = fishObject.GetComponent<Fish>();
@@ -59,6 +59,7 @@ public class Spawner : MonoBehaviour
     private GameObject ChooseFishPrefabByLevel(int fishLevel)
     {
         int playerLevel = _player.GetLevel();
+        
         if (fishLevel > playerLevel)
             return _fishPrefabs[0];
         else

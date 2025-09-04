@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(FixedJoint), typeof(SpringJoint), typeof(Rigidbody))]
 public class Hook : MonoBehaviour
 {
-    [SerializeField] private float _returnTime = 0.5f;
+    [SerializeField] private float _returnTime = 0.55f;
     [SerializeField] private Transform _harpoonTransform;
     [SerializeField] private HarpoonControl _harpoonControl;
     [SerializeField] private Laser _laser;
@@ -16,7 +16,7 @@ public class Hook : MonoBehaviour
     private bool _isMoving;
     private bool _isReturning;
     private float _returnTimer;
-    private float _speed = 20f;
+    private float _speed = 25f;
 
     public bool IsHookActive => _isMoving || _isReturning;
 

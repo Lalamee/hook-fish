@@ -180,6 +180,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5dc2cb2eda0d7946b9c6754360d61ed, type: 3}
+--- !u!1 &250052732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
+  m_PrefabInstance: {fileID: 1040984005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &338353646
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +832,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3277317438541572133}
+    - targetCorrespondingSourceObject: {fileID: 2751856001338234206, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3277317438541572132}
   m_SourcePrefab: {fileID: 100100000, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
 --- !u!1001 &1048603486
 PrefabInstance:
@@ -1528,6 +1539,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3277317438105620452, guid: 13af250cd6da53143ba0a206013b9326, type: 3}
   m_PrefabInstance: {fileID: 1040984005}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3277317438541572132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250052732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122a2540713573a40a5119766079a169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &3277317438541572133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250052732}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.334107, y: 11.617424, z: 5.207567}
+  m_Center: {x: 0.08870649, y: 5.7548084, z: 0.11348331}
 --- !u!4 &3277317438979208945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3277317438105620452, guid: 13af250cd6da53143ba0a206013b9326, type: 3}

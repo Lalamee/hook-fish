@@ -62,6 +62,8 @@ public class Fish : MonoBehaviour
     {
         _fishMover.SetMovementAllowed(false);
         
+        DOTween.Kill(gameObject);
+        
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOScale(1.2f * _initialScale, _vanishGrow));
         sequence.Append(transform.DOScale(Vector3.zero, _vanishCollapse).SetEase(Ease.InBack));
