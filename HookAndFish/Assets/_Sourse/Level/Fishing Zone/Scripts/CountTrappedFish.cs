@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
-
+using DG.Tweening;
 
 public class CountTrappedFish : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private TMP_Text _count;
-    
+
     private int _needCountFish = 3;
+    private int _currentCount = 0;
 
     private void Start()
     {
@@ -24,8 +25,14 @@ public class CountTrappedFish : MonoBehaviour
         _player.CountTrappedFishChange -= OnCountChange;
     }
 
-    private void OnCountChange(int count)
+    private void OnCountChange(int newCount)
     {
-        _count.text = count.ToString() + '/' + _needCountFish.ToString();
+        _currentCount = newCount;
+        
+        _count.text = newCount.ToString() + "/" + _needCountFish.ToString();
+        
+        _count.transform
+            .DOPunchScale(Vector3.one * 0.25f, 0.35f, 8, 0.6f)
+            .SetId(_count.transform);
     }
 }
