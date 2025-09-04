@@ -46,6 +46,7 @@ public class Spawner : MonoBehaviour
         fishObject.transform.parent = spawnPoint;
 
         Fish fish = fishObject.GetComponent<Fish>();
+        
         if (fish != null)
         {
             fish.SetLevel(fishLevel);
@@ -88,7 +89,7 @@ public class Spawner : MonoBehaviour
         else
         {
             float valueForSet = Random.Range(0f, 10f);
-            float halfValue = 9f;
+            float halfValue = 8f;
 
             if (valueForSet <= halfValue)
             {
