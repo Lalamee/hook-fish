@@ -11,15 +11,16 @@ public class Hook : MonoBehaviour
     [SerializeField] private Laser _laser;
     [SerializeField] private FixedJoint _fixed;
     [SerializeField] private SpringJoint _spring;
-    
+
+    private enum HookState { Idle, Flying, Returning }
+    private HookState _state = HookState.Idle;
+
     private Vector3 _initialPosition;
     private Vector3 _targetPosition;
-    private bool _isMoving;
-    private bool _isReturning;
     private float _returnTimer;
     private float _speed = 25f;
 
-    public bool IsHookActive => _isMoving || _isReturning;
+    public bool IsHookActive => _state != HookState.Idle;
 
     private void Start()
     {
@@ -30,25 +31,25 @@ public class Hook : MonoBehaviour
         _spring.maxDistance = 3f;
         _spring.enableCollision = false;
 
-        _laser.OnRenderer(); 
+        // В исходном состоянии лазер включён
+        _laser.OnRenderer();
     }
 
     private void Update()
     {
         if (GameUI.IsOpen)
             return;
-        
-        if (Input.GetMouseButtonUp(0) && !_isMoving && !_isReturning)
+
+        if (Input.GetMouseButtonUp(0) && _state == HookState.Idle)
         {
             Fire();
         }
 
-        if (_isMoving)
+        if (_state == HookState.Flying)
         {
             transform.Translate(Vector3.forward * _speed * Time.deltaTime);
         }
-
-        if (_isReturning)
+        else if (_state == HookState.Returning)
         {
             Return();
         }
@@ -57,39 +58,54 @@ public class Hook : MonoBehaviour
     private void Fire()
     {
         _recoil.DoRecoil();
-        _initialPosition = transform.position;
-        _isMoving = true;
 
-        _laser.OffRenderer(); 
+        _initialPosition = transform.position;
+        _state = HookState.Flying;
+        
+        _laser.OffRenderer();
+
         _harpoonControl.LockMovement();
-        StartCoroutine(ReturnTimerCoroutine());
+        
+        StartCoroutine(DelayedAutoReturn());
     }
 
     private void Return()
     {
         _returnTimer += Time.deltaTime;
-        float lerpProgress = _returnTimer / _returnTime;
-        transform.position = Vector3.Lerp(_targetPosition, _initialPosition, lerpProgress);
+        float t = Mathf.Clamp01(_returnTimer / _returnTime);
+        transform.position = Vector3.Lerp(_targetPosition, _initialPosition, t);
 
-        if (lerpProgress >= 1f)
+        if (t >= 1f)
         {
-            _fixed.connectedBody = null;
-            _harpoonControl.UnlockMovement();
-
-            _isReturning = false;
-            _returnTimer = 0f;
-
-            _laser.OnRenderer();
+            CompleteReturn();
         }
     }
     
+    private void BeginReturn()
+    {
+        if (_state == HookState.Returning) return;
+
+        _targetPosition = transform.position; 
+        _returnTimer = 0f;                    
+        _state = HookState.Returning;
+    }
+
+    private void CompleteReturn()
+    {
+        _fixed.connectedBody = null;
+        _harpoonControl.UnlockMovement();
+
+        _state = HookState.Idle;
+        _returnTimer = 0f;
+        
+        _laser.OnRenderer();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (!_isReturning && collision.gameObject.TryGetComponent(out TrappedFish trappedFish))
+        if (_state == HookState.Flying && collision.gameObject.TryGetComponent(out TrappedFish trappedFish))
         {
-            _targetPosition = transform.position;
-            _isMoving = false;
-            _isReturning = true;
+            BeginReturn();
 
             trappedFish.GetComponent<Collider>().enabled = false;
             _fixed.connectedBody = trappedFish.GetComponent<Rigidbody>();
@@ -97,15 +113,14 @@ public class Hook : MonoBehaviour
         }
     }
 
-    private IEnumerator ReturnTimerCoroutine()
+    private IEnumerator DelayedAutoReturn()
     {
         yield return new WaitForSeconds(_returnTime);
-        
-        if (_isMoving && !_isReturning)
+
+        // Если не попали — инициируем возврат
+        if (_state == HookState.Flying)
         {
-            _targetPosition = transform.position;
-            _isMoving = false;
-            _isReturning = true;
+            BeginReturn();
         }
     }
 }
