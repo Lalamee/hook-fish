@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
 
@@ -16,7 +17,7 @@ public class Popup : MonoBehaviour
         popupInitialScale = popupContainer ? popupContainer.localScale : Vector3.one;
         exitInitialScale  = exitButton    ? exitButton.localScale    : Vector3.one;
     }
-
+    
     public void PlayShow()
     {
         if (popupContainer)

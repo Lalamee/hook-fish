@@ -30,8 +30,7 @@ public class Hook : MonoBehaviour
         _spring.minDistance = 0f;
         _spring.maxDistance = 3f;
         _spring.enableCollision = false;
-
-        // В исходном состоянии лазер включён
+        
         _laser.OnRenderer();
     }
 
@@ -116,8 +115,7 @@ public class Hook : MonoBehaviour
     private IEnumerator DelayedAutoReturn()
     {
         yield return new WaitForSeconds(_returnTime);
-
-        // Если не попали — инициируем возврат
+        
         if (_state == HookState.Flying)
         {
             BeginReturn();

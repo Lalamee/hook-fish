@@ -60349,7 +60349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4082269855243748749}
   - component: {fileID: 8588171747432172866}
-  - component: {fileID: 7717335144051222506}
   m_Layer: 5
   m_Name: Bad End
   m_TagString: Untagged
@@ -60395,23 +60394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5351a91fce3780347b5d32b2de80bb55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 7717335144051222506}
---- !u!114 &7717335144051222506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263615960465407457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4524c2e4ea902ce4c977e7207227016f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupContainer: {fileID: 4082269855243748749}
-  exitButton: {fileID: 0}
-  showDuration: 0.3
-  hideDuration: 0.22
+  popup: {fileID: 0}
 --- !u!1 &8282043683893835950
 GameObject:
   m_ObjectHideFlags: 0

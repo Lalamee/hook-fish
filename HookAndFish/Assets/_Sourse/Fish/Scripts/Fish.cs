@@ -46,6 +46,7 @@ public class Fish : MonoBehaviour
     private void OnDisable()
     {
         FishingStoper.OnFishingStop -= DestroyMe;
+        
         DOTween.Kill(transform);
         
         if (_material != null) 
@@ -67,7 +68,6 @@ public class Fish : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
         sequence.Append(transform.DOScale(1.2f * _initialScale, _vanishGrow));
         sequence.Append(transform.DOScale(Vector3.zero, _vanishCollapse).SetEase(Ease.InBack));
-        sequence.Join(_material.DOFade(0f, _vanishCollapse));
         sequence.OnComplete(() => Destroy(gameObject));
         
         PlayAndDetach(_particleEnd);
@@ -81,19 +81,11 @@ public class Fish : MonoBehaviour
         // sequence.Append(transform.DOScale(new Vector3(1.5f * _initialScale.x, 0.5f * _initialScale.y, _initialScale.z), _caughtPhase).SetEase(Ease.InOutSine));
         // sequence.Append(transform.DOScale(new Vector3(0.7f * _initialScale.x, 1.3f * _initialScale.y, _initialScale.z), _caughtPhase).SetEase(Ease.InOutSine));
         // sequence.Append(transform.DOScale(Vector3.zero, _caughtCollapse).SetEase(Ease.InBack));
-        // sequence.Join(_material.DOFade(0f, _caughtCollapse));
         // sequence.OnComplete(() => Destroy(gameObject));
     }
 
     private void SpawnMe()
     {
-        if (_material.HasProperty("_Color"))
-        {
-            Color color = _material.color;
-            color.a = 1f;
-            _material.color = color;
-        }
-
         transform.localScale = Vector3.zero;
 
         Sequence sequence = DOTween.Sequence();
@@ -107,15 +99,8 @@ public class Fish : MonoBehaviour
         if (particleSystem == null)
             return;
 
-        Transform particleTransform = particleSystem.transform;
-        particleTransform.SetParent(null, true);
-
         particleSystem.gameObject.SetActive(true);
         particleSystem.Play();
-
-        Destroy(particleSystem.gameObject,
-            particleSystem.main.duration +
-            particleSystem.main.startLifetime.constantMax +
-            0.5f);
+        particleSystem.gameObject.SetActive(false);
     }
 }
