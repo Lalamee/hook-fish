@@ -1,10 +1,23 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerSkinItem", menuName = "Shop/PlayerSkinItem")]
+public enum SkinUnlockType { Rewarded, ByLevel }
+
+[CreateAssetMenu(menuName = "Shop/Player Skin", fileName = "PlayerSkin_")]
 public class PlayerSkinItem : ScriptableObject
 {
-    [field: SerializeField] public PlayerSkins SkinType { get; private set; }
-    [field: SerializeField] public GameObject SkinObject { get; private set; }
-    [field: SerializeField] public Sprite Image { get; private set; }
-    [field: SerializeField, Range(0,150)] public int Price { get; private set; }
+    [SerializeField] private PlayerSkins id;
+    [SerializeField] private string displayName;
+    [SerializeField] private Sprite icon;
+    [SerializeField] public GameObject playerPrefab;
+
+    [Header("Unlock")]
+    [SerializeField] private SkinUnlockType unlockType = SkinUnlockType.Rewarded;
+    [SerializeField, Range(0,100000)] private int requiredLevel = 0; 
+
+    public PlayerSkins Id => id;
+    public string DisplayName => displayName;
+    public Sprite Icon => icon;
+    public GameObject PlayerPrefab => playerPrefab;
+    public SkinUnlockType UnlockType => unlockType;
+    public int RequiredLevel => requiredLevel;
 }
