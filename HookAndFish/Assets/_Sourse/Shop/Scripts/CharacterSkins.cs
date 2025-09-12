@@ -1,6 +1,6 @@
-public enum PlayerSkins 
+public enum CharacterSkins 
 {
-    Working,
+    Worker,
     Boxer,
     Criminal,
     Mafia,

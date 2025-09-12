@@ -310,6 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2366507508403280876}
+  - component: {fileID: 2974534247456721877}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -338,6 +339,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 46}
   m_SizeDelta: {x: 0, y: 72.216995}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2974534247456721877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847839454144747538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba689fe56725af4992b387df5ce390a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 5210392962298995695}
 --- !u!1 &5792351127118138051
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +455,7 @@ RectTransform:
   m_GameObject: {fileID: 6507778041117977110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 965900509729082575}
@@ -755,6 +769,7 @@ GameObject:
   - component: {fileID: 965900509729082575}
   - component: {fileID: 1928121529089674105}
   - component: {fileID: 1797230374172659557}
+  - component: {fileID: 2907498526788364654}
   m_Layer: 5
   m_Name: Character Skin Item
   m_TagString: Untagged
@@ -823,3 +838,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2907498526788364654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8863207108996670836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867fdd4a7daaae14d8cf8f3345c71cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _standartBackground: {fileID: 21300000, guid: 28554fc966eb749e587c11db562e7eeb, type: 3}
+  _highlightBackground: {fileID: 21300000, guid: 26d029d646f6e4627ab7b853e7b043fc, type: 3}
+  _contentImage: {fileID: 2338566700110293192}
+  _lockImage: {fileID: 5209714035452324233}
+  _priceView: {fileID: 2974534247456721877}
+  _selectionText: {fileID: 3744318271190391778}
