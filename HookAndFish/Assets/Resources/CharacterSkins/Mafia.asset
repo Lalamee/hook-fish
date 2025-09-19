@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d07a413e02963e42bbeffd628de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 479764cc16ebc5d4b9be4b7eebebb3b4, type: 3}
   m_Name: Mafia
   m_EditorClassIdentifier: 
-  <Model>k__BackingField: {fileID: 3863114220155206786, guid: 8e9ab83424f745745b7620b3d8fbf9c4, type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: e3c47f6517ab8264d9379417f891e235, type: 3}
-  <Price>k__BackingField: 0
-  <SkinType>k__BackingField: 3
+  id: mafia
+  displayName: Mafia
+  icon: {fileID: 21300000, guid: e3c47f6517ab8264d9379417f891e235, type: 3}
+  unlockType: 1
+  requiredLevel: 1
+  rewardedId: mafia
+  skinPrefab: {fileID: 3863114220155206786, guid: 8e9ab83424f745745b7620b3d8fbf9c4, type: 3}

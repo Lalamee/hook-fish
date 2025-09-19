@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d07a413e02963e42bbeffd628de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 479764cc16ebc5d4b9be4b7eebebb3b4, type: 3}
   m_Name: Boxer
   m_EditorClassIdentifier: 
-  <Model>k__BackingField: {fileID: 6094272487406093685, guid: 2d754b5c5e957be4ca09992bd6400f43, type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: 26fd2397259c2924bb8b65862c1d0e5a, type: 3}
-  <Price>k__BackingField: 1970
-  <SkinType>k__BackingField: 1
+  id: boxer
+  displayName: Boxer
+  icon: {fileID: 21300000, guid: 26fd2397259c2924bb8b65862c1d0e5a, type: 3}
+  unlockType: 1
+  requiredLevel: 1
+  rewardedId: boxer
+  skinPrefab: {fileID: 6094272487406093685, guid: 2d754b5c5e957be4ca09992bd6400f43, type: 3}

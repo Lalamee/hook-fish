@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d07a413e02963e42bbeffd628de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 479764cc16ebc5d4b9be4b7eebebb3b4, type: 3}
   m_Name: Criminal
   m_EditorClassIdentifier: 
-  <Model>k__BackingField: {fileID: 8875094817190865558, guid: 73a99725b26dd4f498080fe935cbb996, type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: 0fa4d69eec2045047837bd97cabbc0ea, type: 3}
-  <Price>k__BackingField: 0
-  <SkinType>k__BackingField: 2
+  id: criminal
+  displayName: Criminal
+  icon: {fileID: 21300000, guid: 0fa4d69eec2045047837bd97cabbc0ea, type: 3}
+  unlockType: 0
+  requiredLevel: 250
+  rewardedId: criminal
+  skinPrefab: {fileID: 8875094817190865558, guid: 73a99725b26dd4f498080fe935cbb996, type: 3}

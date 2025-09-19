@@ -1,7 +1,12 @@
 {
-    "idSave": 173,
+    "idSave": 7,
     "playerLevel": 1,
-    "currentLevel": 20,
+    "currentLevel": 2,
     "volume": 0.5,
-    "recentLevels": []
+    "recentLevels": [],
+    "selectedSkinId": "police",
+    "unlockedSkinIds": [
+        "mafia",
+        "police"
+    ]
 }

@@ -9,5 +9,24 @@ namespace YG
         public float volume = 0.5f;
         public List<int> recentLevels = new List<int>(3);
         
+        
+        public string selectedSkinId = "";
+        public List<string> unlockedSkinIds = new List<string>();
+        
+        public bool IsSkinUnlocked(string id)
+        {
+            if (unlockedSkinIds == null)
+                unlockedSkinIds = new List<string>();
+            return unlockedSkinIds.Contains(id);
+        }
+        
+        public void AddUnlockedSkin(string id)
+        {
+            if (unlockedSkinIds == null)
+                unlockedSkinIds = new List<string>();
+
+            if (!unlockedSkinIds.Contains(id))
+                unlockedSkinIds.Add(id);
+        }
     }
 }

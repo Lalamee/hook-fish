@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d07a413e02963e42bbeffd628de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 479764cc16ebc5d4b9be4b7eebebb3b4, type: 3}
   m_Name: Worker
   m_EditorClassIdentifier: 
-  <Model>k__BackingField: {fileID: 5560732405537495307, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: 3a8d165abfbce3949bb4e34405595191, type: 3}
-  <Price>k__BackingField: 4343
-  <SkinType>k__BackingField: 0
+  id: worker
+  displayName: Worker
+  icon: {fileID: 21300000, guid: 3a8d165abfbce3949bb4e34405595191, type: 3}
+  unlockType: 0
+  requiredLevel: 100
+  rewardedId: worker
+  skinPrefab: {fileID: 5560732405537495307, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
