@@ -4,9 +4,6 @@
     "currentLevel": 2,
     "volume": 0.5,
     "recentLevels": [],
-    "selectedSkinId": "police",
-    "unlockedSkinIds": [
-        "mafia",
-        "police"
-    ]
+    "selectedSkinId": "",
+    "unlockedSkinIds": []
 }

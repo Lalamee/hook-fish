@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 630425756083821026}
   - component: {fileID: 1914271296718013164}
   - component: {fileID: 5760299855771942550}
+  - component: {fileID: 8811176391293005684}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -474,6 +475,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5760299855771942550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276873489621903434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc5bcbe51d14161900f7bfa67de41eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.25
+  shakeStrength: 5
+  vibrato: 8
+  randomness: 90
+--- !u!114 &8811176391293005684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1198,6 +1215,7 @@ GameObject:
   - component: {fileID: 3508943848337061214}
   - component: {fileID: 8357918680757432098}
   - component: {fileID: 3322398155684450781}
+  - component: {fileID: 3124046127249344882}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1335,6 +1353,22 @@ MonoBehaviour:
   hand: {fileID: 6455072106064124070}
   iterations: 10
   threshold: 0.01
+--- !u!114 &3124046127249344882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788381489684045894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0b440ec667c4a40a3e570579ff240b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  library: {fileID: 11400000, guid: 45fee5bac894b244d95e6eddf540f41c, type: 2}
+  skeletonRoot: {fileID: 5144463322623069674}
+  mount: {fileID: 1802910989859180452}
+  defaultSkinId: 
 --- !u!1 &5982749870269379492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8373d163211ae4d438864082e5a3aa8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recoil: {fileID: 5760299855771942550}
+  _recoil: {fileID: 8811176391293005684}
   _returnTime: 0.55
   _harpoonTransform: {fileID: 3515435378667195444}
   _harpoonControl: {fileID: 3230218896608000766}
