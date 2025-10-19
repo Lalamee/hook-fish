@@ -4,7 +4,7 @@ using System.Collections;
 public class GameUI : MonoBehaviour
 {
     [SerializeField] private GameObject _menuRoot;
-    //[SerializeField] private Popup _popup;
+    [SerializeField] private Popup _popup;
 
     public static bool IsOpen { get; private set; }
 
@@ -12,7 +12,7 @@ public class GameUI : MonoBehaviour
     {
         IsOpen = true;
         _menuRoot.SetActive(true);
-        //_popup.PlayShow();     // анимированное появление
+        _popup.PlayShow();    
         Time.timeScale = 0f;
     }
 
@@ -22,13 +22,12 @@ public class GameUI : MonoBehaviour
     {
         yield return null;
         while (Input.GetMouseButton(0) || Input.touchCount > 0) yield return null;
-
-        // красиво закрываем, и ТОЛЬКО ПОТОМ выключаем меню
-       // _popup.PlayHide(() =>
-       //{
-            //Time.timeScale = 1f;
-            //_menuRoot.SetActive(false);
-            //IsOpen = false;
-        //});
+      
+        _popup.PlayHide(() =>
+       {
+            Time.timeScale = 1f;
+            _menuRoot.SetActive(false);
+            IsOpen = false;
+       });
     }
 }
