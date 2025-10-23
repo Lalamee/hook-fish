@@ -7,38 +7,6 @@ using Random = UnityEngine.Random;
 
 public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 {
-    private bool _restartAfterAd;
-
-    private void OnEnable()
-    {
-        YG2.onCloseInterAdv += OnInterClose;
-        YG2.onErrorInterAdv += OnInterError;
-    }
-
-    private void OnDisable()
-    {
-        YG2.onCloseInterAdv -= OnInterClose;
-        YG2.onErrorInterAdv -= OnInterError;
-    }
-
-    private void OnInterClose()
-    {
-        if (_restartAfterAd)
-        {
-            _restartAfterAd = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
-    private void OnInterError()
-    {
-        if (_restartAfterAd)
-        {
-            _restartAfterAd = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
     public void LoadLevel()
     {
         Time.timeScale = 1f;
@@ -55,18 +23,15 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
     public void RestartThisLevel()
     {
         Time.timeScale = 1f;
-        _restartAfterAd = true;
-#if UNITY_WEBGL && !UNITY_EDITOR
         YG2.InterstitialAdvShow();
-#else
-        OnInterClose();
-#endif
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
+    
     public void OnSceneLoaded(int argument)
     {
-        if (argument == 1)
+        if (argument == 1) 
             Time.timeScale = 1f;
+        
         SceneManager.LoadScene(argument);
     }
 
