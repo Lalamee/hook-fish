@@ -4,22 +4,23 @@ namespace YG
 {
     public partial class SavesYG
     {
-		public int playerLevel = 1;
+        public int playerLevel = 1;
         public int currentLevel = 2;
         public float volume = 0.5f;
         public List<int> recentLevels = new List<int>(3);
-        
-        
+
         public string selectedSkinId = "";
         public List<string> unlockedSkinIds = new List<string>();
         
+        public bool showMenuAdNext = false;
+
         public bool IsSkinUnlocked(string id)
         {
             if (unlockedSkinIds == null)
                 unlockedSkinIds = new List<string>();
             return unlockedSkinIds.Contains(id);
         }
-        
+
         public void AddUnlockedSkin(string id)
         {
             if (unlockedSkinIds == null)

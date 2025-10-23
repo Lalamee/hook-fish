@@ -1,17 +1,38 @@
 using UnityEngine;
 using YG;
+
 public class Bootstrap : MonoBehaviour
 {
     [SerializeField] private LevelLoader _levelLoader;
-    
-    void Update()
+    private bool _started;
+
+    private void OnEnable()
     {
-        if (YG2.isSDKEnabled)
+        YG2.onGetSDKData += OnSdkReady;
+    }
+
+    private void OnDisable()
+    {
+        YG2.onGetSDKData -= OnSdkReady;
+    }
+
+    private void Start()
+    {
+        if (YG2.isSDKEnabled) OnSdkReady();
+    }
+
+    private void OnSdkReady()
+    {
+        if (_started) return;
+        _started = true;
+
+        if (YG2.isFirstGameSession)
         {
-            if (YG2.isFirstGameSession)
-                _levelLoader.OnSceneLoaded(YG2.saves.currentLevel);
-            else
-                _levelLoader.LoadMenu();
+            _levelLoader.OnSceneLoaded(YG2.saves.currentLevel);
+        }
+        else
+        {
+            _levelLoader.LoadMenu();
         }
     }
 }
