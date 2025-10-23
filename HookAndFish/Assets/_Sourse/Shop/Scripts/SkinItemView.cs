@@ -7,18 +7,17 @@ public enum SkinItemState { LockedLevel, LockedAd, Unlocked, Selected }
 
 public class SkinItemView : MonoBehaviour
 {
-    [Header("Иерархия карточки")]
-    [SerializeField] private Image playerImage;        // Player (Image) — превью из SO.icon
-    [SerializeField] private GameObject lockImage;     // LockImage (оверлей)
-    [SerializeField] private Transform priceRoot;      // Price (плашка для Lvl/Watch Ad)
-    [SerializeField] private TMP_Text priceText;       // Price/Text (TMP)
-    [SerializeField] private GameObject selectedBadge; // Selected (зелёная плашка-индикатор)
-    [SerializeField] private TMP_Text selectedText;    // Selected/Text (TMP)
-    [SerializeField] private Button button;            // Button на корне (вся карточка)
+    [SerializeField] private Image playerImage;
+    [SerializeField] private GameObject lockImage;
+    [SerializeField] private Transform priceRoot;
+    [SerializeField] private TMP_Text priceText;
+    [SerializeField] private GameObject selectedBadge;
+    [SerializeField] private TMP_Text selectedText;
+    [SerializeField] private Button button;
+    [SerializeField] private Image adIcon;
 
-    [Header("Локализация (твой LanguageSwitcher)")]
-    [SerializeField] private LanguageSwitcher priceTextLang;    // компонент на Price/Text
-    [SerializeField] private LanguageSwitcher selectedTextLang; // компонент на Selected/Text (опц.)
+    [SerializeField] private LanguageSwitcher priceTextLang;
+    [SerializeField] private LanguageSwitcher selectedTextLang;
 
     private SkinDefinition _def;
     private SkinShop _shop;
@@ -35,7 +34,6 @@ public class SkinItemView : MonoBehaviour
         if (!priceTextLang && priceText) priceTextLang = priceText.GetComponent<LanguageSwitcher>();
         if (!selectedTextLang && selectedText) selectedTextLang = selectedText.GetComponent<LanguageSwitcher>();
 
-        // превью из SO
         if (playerImage)
         {
             playerImage.sprite = _def.icon;
@@ -43,10 +41,8 @@ public class SkinItemView : MonoBehaviour
             playerImage.enabled = (_def.icon != null);
         }
 
-        // оверлей не должен блокировать клики
         MakeOverlayNonBlocking(lockImage);
 
-        // кнопка = вся карточка
         if (button)
         {
             button.enabled = true;
@@ -54,7 +50,6 @@ public class SkinItemView : MonoBehaviour
             button.onClick.AddListener(OnClick);
         }
 
-        // локализация бейджа Selected
         if (selectedText && selectedTextLang)
         {
             selectedTextLang.baseText = "";
@@ -68,10 +63,9 @@ public class SkinItemView : MonoBehaviour
             selectedText.text = "Selected";
         }
 
-        // подписка на событие магазина
         if (_shop != null)
         {
-            _shop.OnSkinsChanged -= OnShopChanged; // на всякий
+            _shop.OnSkinsChanged -= OnShopChanged;
             _shop.OnSkinsChanged += OnShopChanged;
         }
 
@@ -85,8 +79,8 @@ public class SkinItemView : MonoBehaviour
 
     private void OnShopChanged()
     {
-        Redraw();           // обновляем себя
-        _onAnyAction?.Invoke(); // и просим соседей перерисоваться (через UIController)
+        Redraw();
+        _onAnyAction?.Invoke();
     }
 
     public void Redraw()
@@ -98,17 +92,19 @@ public class SkinItemView : MonoBehaviour
             ? (_def.unlockType == SkinUnlockType.Level ? SkinItemState.LockedLevel : SkinItemState.LockedAd)
             : (selected ? SkinItemState.Selected : SkinItemState.Unlocked);
 
-        if (lockImage)     lockImage.SetActive(state == SkinItemState.LockedLevel || state == SkinItemState.LockedAd);
-
-        // нижние плашки:
-        if (priceRoot)     priceRoot.gameObject.SetActive(state == SkinItemState.LockedLevel || state == SkinItemState.LockedAd);
+        if (lockImage) lockImage.SetActive(state == SkinItemState.LockedLevel || state == SkinItemState.LockedAd);
+        if (priceRoot) priceRoot.gameObject.SetActive(state == SkinItemState.LockedLevel || state == SkinItemState.LockedAd);
         if (selectedBadge) selectedBadge.SetActive(state == SkinItemState.Selected);
 
-        // тексты для Price (когда закрыт)
+        if (adIcon)
+        {
+            bool showAdIcon = state == SkinItemState.LockedAd;
+            adIcon.gameObject.SetActive(showAdIcon);
+        }
+
         if (state == SkinItemState.LockedLevel) SetPriceText_Level(_def.requiredLevel);
         else if (state == SkinItemState.LockedAd) SetPriceText_WatchAd();
 
-        // кликабельность карточки
         if (button)
         {
             bool canClick =
@@ -116,7 +112,7 @@ public class SkinItemView : MonoBehaviour
                 || state == SkinItemState.LockedAd
                 || state == SkinItemState.Unlocked;
 
-            button.interactable = canClick; // выбранный — не кликается
+            button.interactable = canClick;
         }
     }
 
@@ -133,27 +129,26 @@ public class SkinItemView : MonoBehaviour
             }
             else
             {
-                _shop.TryUnlockRewardedSkin(_def.id); // показать рекламу
+                _shop.TryUnlockRewardedSkin(_def.id);
             }
         }
         else
         {
             _shop.TrySelectSkin(_def.id);
         }
-        // локальная перерисовка — на случай мгновенных изменений
+
         Redraw();
     }
 
-    // --- helpers ---
     private void SetPriceText_Level(int level)
     {
         if (priceTextLang != null)
         {
-            priceTextLang.baseText = level.ToString(); // число
+            priceTextLang.baseText = level.ToString();
             priceTextLang.ru = "Ур.";
             priceTextLang.en = "Lvl";
             priceTextLang.tr = "Sev.";
-            priceTextLang.UpdateText();                // "250 Ур." / "250 Lvl" / "250 Sev."
+            priceTextLang.UpdateText();
         }
         else if (priceText) priceText.text = $"Lvl {level}";
     }

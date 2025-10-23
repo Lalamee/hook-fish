@@ -24,6 +24,8 @@ public class Hook : MonoBehaviour
 
     private void Start()
     {
+        _state = HookState.Idle;
+        
         _spring.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
         _spring.spring = 100f;
         _spring.damper = 5f;

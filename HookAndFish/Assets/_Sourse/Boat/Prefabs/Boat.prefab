@@ -277,7 +277,6 @@ GameObject:
   - component: {fileID: 4160785788165843208}
   - component: {fileID: 630425756083821026}
   - component: {fileID: 1914271296718013164}
-  - component: {fileID: 5760299855771942550}
   - component: {fileID: 8811176391293005684}
   - component: {fileID: 2772440858158389941}
   m_Layer: 0
@@ -475,22 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1caa4721eb5e654f9f41552c7957bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5760299855771942550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2276873489621903434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc5bcbe51d14161900f7bfa67de41eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeDuration: 0.25
-  shakeStrength: 5
-  vibrato: 8
-  randomness: 90
 --- !u!114 &8811176391293005684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,7 +1770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40ec4f8714920c4a86308110b4c675c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 200
+  _rotationSpeed: 150
 --- !u!1 &6698224886089418546
 GameObject:
   m_ObjectHideFlags: 0

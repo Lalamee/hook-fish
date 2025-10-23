@@ -3,6 +3,7 @@ using DG.Tweening;
 
 public class LeaderboardPopup : MonoBehaviour
 {
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private RectTransform popupContainer;
     [SerializeField] private RectTransform exitButton;
     [SerializeField] private float showDuration = 0.3f;
@@ -51,6 +52,10 @@ public class LeaderboardPopup : MonoBehaviour
         hideTween = DOTween.Sequence()
             .Join(t1)
             .Join(t2)
-            .OnComplete(() => gameObject.SetActive(false));
+            .OnComplete(() =>
+            {
+                mainMenu.SetActive(true);
+                gameObject.SetActive(false);
+            });
     }
 }
