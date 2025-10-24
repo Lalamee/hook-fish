@@ -5,7 +5,7 @@ public class LevelFinisher : MonoBehaviour
     private GoodEnd _goodEnd;
     private BadEnd _badEnd;
 
-    private void Awake()
+    private void Start()
     {
         _goodEnd = FindObjectOfType<GoodEnd>();
         _badEnd = FindObjectOfType<BadEnd>();

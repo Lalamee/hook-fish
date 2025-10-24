@@ -8,122 +8,55 @@ using Random = UnityEngine.Random;
 
 public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 {
-    private bool _isLoading;
-
-    // --- ВСПОМОГАТЕЛЬНОЕ: безопасная пауза/возврат ---
-    private static void SafePause()
-    {
-        // Если у тебя включён Pause Game в YG, это необязательно — но не повредит.
-        Time.timeScale = 0f;
-        AudioListener.pause = true;
-    }
-
-    private static void SafeResume()
-    {
-        Time.timeScale = 1f;
-        AudioListener.pause = false;
-    }
-
-    // --- Универсальный показ интерститиала с одноразовыми колбэками ---
-    private void ShowInterThen(Action after)
-    {
-        if (_isLoading) return;
-        _isLoading = true;
-
-#if UNITY_WEBGL && !UNITY_EDITOR
-        bool done = false;
-
-        Action onClose = null;
-        Action onError = null;
-
-        onClose = () =>
-        {
-            if (done) return; done = true;
-            YG2.onCloseInterAdv -= onClose;
-            YG2.onErrorInterAdv -= onError;
-            SafeResume();
-            _isLoading = false;
-            after?.Invoke();
-        };
-
-        onError = () =>
-        {
-            if (done) return; done = true;
-            YG2.onCloseInterAdv -= onClose;
-            YG2.onErrorInterAdv -= onError;
-            SafeResume();
-            _isLoading = false;
-            after?.Invoke(); // при ошибке тоже продолжаем UX
-        };
-
-        YG2.onCloseInterAdv += onClose;
-        YG2.onErrorInterAdv += onError;
-
-        SafePause();
-        YG2.InterstitialAdvShow();
-#else
-        // в редакторе — сразу выполняем «после рекламы»
-        SafeResume();
-        _isLoading = false;
-        after?.Invoke();
-#endif
-    }
-
-    // --- ПУБЛИЧНЫЕ ВЫЗОВЫ ---
-
     public void LoadLevel()
     {
-        if (_isLoading) return;
-        SafeResume();
+        Time.timeScale = 1f;
         SceneManager.LoadScene(YG2.saves.currentLevel);
     }
 
     public void LoadMenu()
     {
-        if (_isLoading) return;
-        
-        bool showNow = YG2.saves.showMenuAdNext;
-        
-        YG2.saves.showMenuAdNext = !showNow;
+        Time.timeScale = 1f;
         YG2.SaveProgress();
-
-        if (showNow)
-        {
-            ShowInterThen(() =>
-            {
-                SafeResume();
-                SceneManager.LoadScene(1);
-            });
-        }
-        else
-        {
-            SafeResume();
-            SceneManager.LoadScene(1);
-        }
+        SceneManager.LoadScene(1);
     }
 
     public void RestartThisLevel()
     {
-        if (_isLoading) return;
+        Time.timeScale = 1f;
 
-        ShowInterThen(() =>
+        ShowInterstitial(() =>
         {
-            SafeResume();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         });
     }
 
+    private void ShowInterstitial(Action onComplete)
+    {
+        if (!YG2.isTimerAdvCompleted)
+        {
+            onComplete?.Invoke();
+            return;
+        }
+
+        YG2.InterstitialAdvShow();
+        
+        YG2.onCloseInterAdvWasShow += (bool shown) =>
+        {
+            onComplete?.Invoke();
+        };
+    }
+
     public void OnSceneLoaded(int argument)
     {
-        if (_isLoading) return;
-        SafeResume();
+        if (argument == 1)
+            Time.timeScale = 1f;
+
         SceneManager.LoadScene(argument);
     }
 
     public void LoadNextLevel()
     {
-        if (_isLoading) return;
-
         int firstPlayableIndex = 2;
         int lastPlayableIndexPlan = 21;
         int historyWindowSize = 3;
@@ -147,7 +80,7 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
         var excluded = new List<int>();
         if (currentBuildIndex >= minPlayableIndex && currentBuildIndex <= maxPlayableIndex)
-            excluded.Add(currentBuildIndex);
+            if (!excluded.Contains(currentBuildIndex)) excluded.Add(currentBuildIndex);
 
         for (int i = 0; i < history.Count && i < historyWindowSize; i++)
         {
@@ -177,6 +110,7 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
         if (currentBuildIndex >= minPlayableIndex && currentBuildIndex <= maxPlayableIndex)
         {
             history.Insert(0, currentBuildIndex);
+
             for (int i = 0; i < history.Count; i++)
                 for (int j = history.Count - 1; j > i; j--)
                     if (history[j] == history[i])
@@ -187,7 +121,6 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
         }
 
         YG2.SaveProgress();
-        SafeResume();
         SceneManager.LoadScene(nextBuildIndex);
     }
 }

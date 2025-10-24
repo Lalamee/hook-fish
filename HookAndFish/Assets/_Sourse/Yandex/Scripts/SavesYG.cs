@@ -11,8 +11,6 @@ namespace YG
 
         public string selectedSkinId = "";
         public List<string> unlockedSkinIds = new List<string>();
-        
-        public bool showMenuAdNext = false;
 
         public bool IsSkinUnlocked(string id)
         {
