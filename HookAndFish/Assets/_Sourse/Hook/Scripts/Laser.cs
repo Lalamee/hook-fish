@@ -8,6 +8,16 @@ public class Laser : MonoBehaviour
     
     private bool _isRenderer;
     private float _lineLength = 15f;
+    
+    private void OnEnable()
+    {
+        FishingStoper.OnFishingStop += OffRenderer;
+    }
+
+    private void OnDisable()
+    {
+        FishingStoper.OnFishingStop -= OffRenderer;
+    }
 
     private void Start()
     {

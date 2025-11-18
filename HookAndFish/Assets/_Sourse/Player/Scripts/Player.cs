@@ -11,6 +11,16 @@ public class Player : MonoBehaviour
     public event Action<int> LevelChange;
     public event Action<int> CountTrappedFishChange;
 
+    private void OnEnable()
+    {
+        FishingStoper.OnFishingStop += EndFishInZone;
+    }
+
+    private void OnDisable()
+    {
+        FishingStoper.OnFishingStop -= EndFishInZone;
+    }
+    
     private void Start()
     {
         _countTrappedFish = 0;
@@ -51,17 +61,23 @@ public class Player : MonoBehaviour
         return _startLevel;
     }
 
-    public void SetNewStartLevel()
-    {
-        _startLevel = _level;
-    }
-
     public int GetCountTrappedFish()
     {
         return _countTrappedFish;
     }
-
-    public void ResetCountTrappedFish()
+    
+    public void EndFishInZone()
+    {
+        SetNewStartLevel();
+        ResetCountTrappedFish();
+    }
+    
+    private void SetNewStartLevel()
+    {
+        _startLevel = _level;
+    }
+    
+    private void ResetCountTrappedFish()
     {
         _countTrappedFish = 0;
     }

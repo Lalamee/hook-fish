@@ -5,12 +5,13 @@ public class LevelFinisher : MonoBehaviour
     private GoodEnd _goodEnd;
     private BadEnd _badEnd;
 
-    private void Start()
+    public void Initialize(GoodEnd goodEnd, BadEnd badEnd)
     {
-        _goodEnd = FindObjectOfType<GoodEnd>();
-        _badEnd = FindObjectOfType<BadEnd>();
-        _goodEnd.TurnOffObject();
-        _badEnd.TurnOffObject();
+        _goodEnd = goodEnd;
+        _badEnd = badEnd;
+
+        _goodEnd?.TurnOffObject();
+        _badEnd?.TurnOffObject();
     }
 
     public void BadEnd()

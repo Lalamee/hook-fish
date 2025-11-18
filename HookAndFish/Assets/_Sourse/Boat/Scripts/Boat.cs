@@ -7,18 +7,14 @@ public class Boat : MonoBehaviour
     [SerializeField] private BoatMover _boatMover;
     [SerializeField] private ParticleSystem _motorSplashFx;
     
+    private readonly List<AreaForBoat> _allTargetAreas = new List<AreaForBoat>();
     private float _arriveDistance = 0.25f; 
-    private List<AreaForBoat> _allTargetAreas;
-
-    private void Awake()
-    {
-        _allTargetAreas = new List<AreaForBoat>();
-    }
+    private bool _isInitialized;
 
     private void OnEnable()
     {
-        FindAllTargetAreas();
-        UpdateNearestTarget();
+        if (_isInitialized)
+            UpdateNearestTarget();
     }
 
     private void OnDisable()
@@ -28,14 +24,18 @@ public class Boat : MonoBehaviour
 
     private void Update()
     {
-        UpdateNearestTarget();
+        if (_isInitialized)
+            UpdateNearestTarget();
     }
-
-    private void FindAllTargetAreas()
+    
+    public void Initialize(IEnumerable<AreaForBoat> targetAreas)
     {
         _allTargetAreas.Clear();
-        AreaForBoat[] areas = FindObjectsOfType<AreaForBoat>();
-        _allTargetAreas.AddRange(areas);
+
+        if (targetAreas != null)
+            _allTargetAreas.AddRange(targetAreas);
+
+        _isInitialized = true;
     }
 
     private void UpdateNearestTarget()
@@ -52,7 +52,7 @@ public class Boat : MonoBehaviour
         if (_allTargetAreas.Count == 0)
         {
             StopMotorFx();
-            _levelFinisher.GoodEnd();
+            _levelFinisher?.GoodEnd();
             
             return;
         }

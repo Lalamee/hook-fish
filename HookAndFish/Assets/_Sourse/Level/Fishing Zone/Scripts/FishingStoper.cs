@@ -7,22 +7,13 @@ public class FishingStoper : MonoBehaviour
     public static event Action OnFishingStop;
 
     private Player _player;
-    private BoatMover _boat;
+    private BoatMover _boatMover;
     private HarpoonControl _harpoon;
     private Hook _hook;
     private Laser _laser;
     private int _countTrappedFish;
     private int _needCountFish = 3;
-
-    private void Start()
-    {
-        _player = FindObjectOfType<Player>();
-        _boat = FindObjectOfType<BoatMover>();
-        _harpoon = FindObjectOfType<HarpoonControl>();
-        _hook = FindObjectOfType<Hook>();
-        _laser = FindObjectOfType<Laser>();
-    }
-
+    
     private void Update()
     {
         _countTrappedFish = _player.GetCountTrappedFish();
@@ -31,16 +22,30 @@ public class FishingStoper : MonoBehaviour
             StopFishing();
     }
 
+    public void Initialize(Player player, BoatMover boatMover, HarpoonControl harpoon, Hook hook, Laser laser)
+    {
+        _player = player;
+        _boatMover = boatMover;
+        _harpoon = harpoon;
+        _hook = hook;
+        _laser = laser;
+    }
+
     private void StopFishing()
     {
-        OnFishingStop?.Invoke(); 
+        OnFishingStop?.Invoke();
 
-        _laser.OffRenderer();
-        _player.SetNewStartLevel();
-        _player.ResetCountTrappedFish();
-        _boat.enabled = true;
-        _harpoon.enabled = false;
-        _hook.enabled = false;
+        _laser?.OffRenderer();
+        _player?.EndFishInZone();
+
+        if (_boatMover != null)
+            _boatMover.enabled = true;
+
+        if (_harpoon != null)
+            _harpoon.enabled = false;
+
+        if (_hook != null)
+            _hook.enabled = false;
 
         Destroy(gameObject);
     }

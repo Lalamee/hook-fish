@@ -11,24 +11,27 @@ public class FishMover : MonoBehaviour
     private float _zero;
     private bool _movementAllowed;
 
-    private void OnEnable()
-    {
-        _boat = FindObjectOfType<Boat>();
-        _rotationY = -90f;
-        _zero = 0f;
-        
-        float boatX = _boat.transform.position.x;
-        _direction = boatX < transform.position.x ? -1 : 1;
-        
-        transform.localRotation = Quaternion.Euler(0f, _rotationY * _direction, 0f);
-    }
-
     private void Update()
     {
         if (!_movementAllowed) 
             return;
         
         Move();
+    }
+    
+    public void Initialize(Boat boat)
+    {
+        _rotationY = -90f;
+        _zero = 0f;
+        _boat = boat;
+
+        if (_boat == null)
+            return;
+
+        float boatX = _boat.transform.position.x;
+        _direction = boatX < transform.position.x ? -1 : 1;
+
+        transform.localRotation = Quaternion.Euler(0f, _rotationY * _direction, 0f);
     }
 
     private void Move()

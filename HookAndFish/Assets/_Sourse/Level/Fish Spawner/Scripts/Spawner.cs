@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     private float _elapsedTime = 0f;
 
     private Player _player;
+    private Boat _boat;
+    private LevelFinisher _levelFinisher;
     private int? _previousFishLevel;
 
     private int _previousSpawnIndex = -1;
@@ -18,14 +20,16 @@ public class Spawner : MonoBehaviour
     private int _highLevelFishStreak = 2;
     private int _levelFishStreak = 0;
 
-    private void Start()
+    private void Awake()
     {
         _spawnPoints = GetComponentsInChildren<Transform>();
-        _player = FindObjectOfType<Player>();
     }
 
     private void Update()
     {
+        if (_player == null)
+            return;
+        
         _elapsedTime += Time.deltaTime;
 
         if (_elapsedTime >= _secondsBetweenSpawn)
@@ -33,6 +37,13 @@ public class Spawner : MonoBehaviour
             _elapsedTime = 0f;
             CreateFishAtRandomPoint();
         }
+    }
+    
+    public void Initialize(Player player, Boat boat, LevelFinisher levelFinisher)
+    {
+        _player = player;
+        _boat = boat;
+        _levelFinisher = levelFinisher;
     }
 
     private void CreateFishAtRandomPoint()
@@ -51,6 +62,12 @@ public class Spawner : MonoBehaviour
         {
             fish.SetLevel(fishLevel);
             _previousFishLevel = fishLevel;
+            
+            if (fish.TryGetComponent(out FishLevelTransmitter transmitter))
+                transmitter.Initialize(_player, _levelFinisher);
+
+            if (fish.TryGetComponent(out FishMover fishMover))
+                fishMover.Initialize(_boat);
         }
 
         UpdateSpawnSideTracking(spawnPointIndex);

@@ -9,15 +9,21 @@ public class FishLevelTransmitter : MonoBehaviour
     
     private Player _player;
     private LevelFinisher _levelFinisher;
-
-    private void Start()
+    
+    public void Initialize(Player player, LevelFinisher levelFinisher)
     {
-        _player = FindObjectOfType<Player>();
-        _levelFinisher = FindObjectOfType<LevelFinisher>();
+        _player = player;
+        _levelFinisher = levelFinisher;
     }
 
     public void TransmitAndDestroy()
     {
+        if (_player == null || _levelFinisher == null)
+        {
+            Debug.LogError("[FishLevelTransmitter] Dependencies are not set.");
+            return;
+        }
+        
         if (_player.IsPlayerLevelMore(_fish.Level))
         {
             _audioClipChosen.PlayGoodAudioInPlace();

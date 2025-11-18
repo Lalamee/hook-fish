@@ -49,14 +49,13 @@ public class LevelTimer : MonoBehaviour
         _baseScale = timerText.rectTransform.localScale;
     }
 
-    void Start()
+    private void Start()
     {
-        _finisher = FindObjectOfType<LevelFinisher>();
         _time = _levelMinutes * 60 + _levelSeconds;
         Redraw();
     }
 
-    void Update()
+    private void Update()
     {
         _time -= Time.deltaTime;
         if (_time < 0f) _time = 0f;
@@ -72,7 +71,12 @@ public class LevelTimer : MonoBehaviour
             _finisher.BadEnd();
     }
 
-    void Redraw()
+    public void Initialize(LevelFinisher finisher)
+    {
+        _finisher = finisher;
+    }
+    
+    private void Redraw()
     {
         int m = Mathf.FloorToInt(_time / 60f);
         int s = Mathf.FloorToInt(_time % 60f);
@@ -82,7 +86,7 @@ public class LevelTimer : MonoBehaviour
             timerText.color = (_time <= _criticalTime) ? Color.red : _baseColor;
     }
 
-    void OnFishingStop()
+    private void OnFishingStop()
     {
         _time += _bonusSeconds;
         Redraw();
@@ -107,7 +111,7 @@ public class LevelTimer : MonoBehaviour
                 .SetUpdate(true));
     }
 
-    void StartPulse()
+    private void StartPulse()
     {
         if (_pulseTween != null && _pulseTween.IsActive()) return;
 
@@ -118,7 +122,7 @@ public class LevelTimer : MonoBehaviour
             .SetUpdate(true);
     }
 
-    void StopPulse()
+    private void StopPulse()
     {
         if (_pulseTween == null || !_pulseTween.IsActive()) return;
 

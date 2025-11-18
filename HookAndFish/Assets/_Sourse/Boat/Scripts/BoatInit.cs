@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoatInit : MonoBehaviour
@@ -8,13 +6,10 @@ public class BoatInit : MonoBehaviour
     [SerializeField] private HarpoonControl _harpoon;
     [SerializeField] private Hook _hook;
 
-    private void Start()
+    public void Init()
     {
-        Time.timeScale = 1;
-
         _boat.enabled = true;
         _harpoon.enabled = false;
         _hook.enabled = false;
-
     }
 }
