@@ -637,6 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8836467172457973155}
+  - component: {fileID: 50348592199455108}
   m_Layer: 5
   m_Name: UIInGame
   m_TagString: Untagged
@@ -666,6 +667,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &50348592199455108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418937193121097272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b45117cd3a750f4ea13f39e676e4995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558189700578374458
 GameObject:
   m_ObjectHideFlags: 0
@@ -47474,6 +47487,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6941412965932841415}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6604076026516807733}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadMenu
@@ -49135,6 +49160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ca7883e685c47b4c10820e7c3632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inGame: {fileID: 50348592199455108}
   _setting: {fileID: 7276741599269574703}
   _goodEnd: {fileID: 3030363343826044200}
   _badEnd: {fileID: 8588171747432172866}

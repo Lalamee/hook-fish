@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(FixedJoint), typeof(SpringJoint), typeof(Rigidbody))]
 public class Hook : MonoBehaviour
@@ -38,10 +39,7 @@ public class Hook : MonoBehaviour
 
     private void Update()
     {
-        if (GameUI.IsOpen)
-            return;
-
-        if (Input.GetMouseButtonUp(0) && _state == HookState.Idle)
+        if (Input.GetMouseButtonUp(0) && _state == HookState.Idle && !IsPointerOverUI())
         {
             Fire();
         }
@@ -112,6 +110,11 @@ public class Hook : MonoBehaviour
             _fixed.connectedBody = trappedFish.GetComponent<Rigidbody>();
             trappedFish.CheckPosition(_initialPosition, _returnTime, _returnTimer);
         }
+    }
+
+    private bool IsPointerOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
     }
 
     private IEnumerator DelayedAutoReturn()

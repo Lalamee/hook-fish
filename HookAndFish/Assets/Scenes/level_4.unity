@@ -257,29 +257,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b357847284ea0743a104d3ddaf754f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 5937414706002826770}
   _boat: {fileID: 6794174455906606598}
   _boatMover: {fileID: 6794174455906606597}
+  _levelFinisher: {fileID: 6794174455906606596}
   _harpoon: {fileID: 6794174455906606593}
   _hook: {fileID: 6794174455906606595}
   _laser: {fileID: 6794174455906606594}
+  _player: {fileID: 5937414706002826770}
   _fishingStopers:
   - {fileID: 4792465429959495376}
   - {fileID: 1355997602}
   - {fileID: 407536981}
-  _levelFinisher: {fileID: 6794174455906606596}
-  _levelTimer: {fileID: 1782122796}
-  _goodEnd: {fileID: 1782122795}
-  _badEnd: {fileID: 1782122794}
-  _areas:
-  - {fileID: 4792465429959495377}
-  - {fileID: 1355997603}
-  - {fileID: 407536982}
   _spawners:
   - {fileID: 4792465429959495378}
   - {fileID: 1355997604}
   - {fileID: 407536983}
-  _levelUI: {fileID: 0}
+  _areas:
+  - {fileID: 4792465429959495377}
+  - {fileID: 1355997603}
+  - {fileID: 407536982}
+  _levelUI: {fileID: 1782122797}
+  _levelTimer: {fileID: 1782122796}
+  _goodEnd: {fileID: 1782122795}
+  _badEnd: {fileID: 1782122794}
 --- !u!4 &193957296
 Transform:
   m_ObjectHideFlags: 0
@@ -1881,6 +1881,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8a3a8fb074e753448d021e9f723c96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782122797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3743435445765746804, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+  m_PrefabInstance: {fileID: 1782122793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5567ca7883e685c47b4c10820e7c3632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1927974980

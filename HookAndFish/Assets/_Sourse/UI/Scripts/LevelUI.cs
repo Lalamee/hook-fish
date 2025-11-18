@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class LevelUI : MonoBehaviour
 {
-    [SerializeField] Setting _setting;
-    [SerializeField] GoodEnd _goodEnd;
-    [SerializeField] BadEnd _badEnd;
+    [SerializeField] private UIInGame _inGame;
+    [SerializeField] private Setting _setting;
+    [SerializeField] private GoodEnd _goodEnd;
+    [SerializeField] private BadEnd _badEnd;
 
     public void Initialize()
     {
+        _inGame.gameObject.SetActive(true);
         _setting.gameObject.SetActive(false);
         _goodEnd.TurnOffObject();
         _badEnd.TurnOffObject();

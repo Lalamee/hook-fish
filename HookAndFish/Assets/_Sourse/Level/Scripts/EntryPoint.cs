@@ -29,6 +29,8 @@ public class EntryPoint : MonoBehaviour
         if (_levelFinisher != null)
             _levelFinisher.Initialize(_goodEnd, _badEnd);
     
+        _levelUI.Initialize();
+        
         if (_levelTimer != null)
             _levelTimer.Initialize(_levelFinisher);
     
@@ -45,7 +47,5 @@ public class EntryPoint : MonoBehaviour
     
             spawner.Initialize(_player, _boat, _levelFinisher);
         }
-
-        _levelUI.Initialize();
     }
 }
