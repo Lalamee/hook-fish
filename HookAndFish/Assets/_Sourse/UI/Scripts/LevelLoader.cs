@@ -16,7 +16,7 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
         YG2.SaveProgress();
         SceneManager.LoadScene(1);
     }
@@ -120,6 +120,7 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
                 history.RemoveRange(historyWindowSize, history.Count - historyWindowSize);
         }
 
+        Time.timeScale = 1f;
         YG2.SaveProgress();
         SceneManager.LoadScene(nextBuildIndex);
     }

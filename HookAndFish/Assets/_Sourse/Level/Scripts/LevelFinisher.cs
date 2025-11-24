@@ -16,18 +16,13 @@ public class LevelFinisher : MonoBehaviour
 
     public void BadEnd()
     {
+        Time.timeScale = 0;
         _badEnd.TurnOnObject();
-        End();
     }
 
     public void GoodEnd() 
     {
-        _goodEnd.TurnOnObject();
-        End();
-    }
-
-    private void End()
-    {
         Time.timeScale = 0;
+        _goodEnd.TurnOnObject();
     }
 }

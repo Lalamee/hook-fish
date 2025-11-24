@@ -25,7 +25,7 @@ public class Popup : MonoBehaviour
             popupContainer.localScale = Vector3.zero;
             popupContainer.DOScale(popupInitialScale, showDuration)
                 .SetEase(Ease.OutBack)
-                .SetUpdate(true); // работает при timeScale=0
+                .SetUpdate(true); 
         }
 
         if (exitButton)

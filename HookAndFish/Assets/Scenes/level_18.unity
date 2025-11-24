@@ -706,6 +706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770907552}
     m_Modifications:
+    - target: {fileID: 6689931604413448303, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7030940628132927313, guid: 9853950e0b7c98946b022fa703f4700a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Pohutukawa_03
@@ -1018,7 +1022,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2521419605241607975, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.282612
+      value: -12.78
       objectReference: {fileID: 0}
     - target: {fileID: 2521419605241607975, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1026,7 +1030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2521419605241607975, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.544472
+      value: 23.8
       objectReference: {fileID: 0}
     - target: {fileID: 2521419605241607975, guid: 3ac5193848b216c47a5df181f764b9d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1426,7 +1430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528105905915501361, guid: f8b69c4243c96f64a883b82c45c86faa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.539505
+      value: -9.04
       objectReference: {fileID: 0}
     - target: {fileID: 6528105905915501361, guid: f8b69c4243c96f64a883b82c45c86faa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1434,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528105905915501361, guid: f8b69c4243c96f64a883b82c45c86faa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.22678
+      value: 23.07
       objectReference: {fileID: 0}
     - target: {fileID: 6528105905915501361, guid: f8b69c4243c96f64a883b82c45c86faa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2057,6 +2061,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554753757180055235, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 554753757180055235, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2746921760442673286, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: _player
       value: 
@@ -2145,6 +2157,38 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 5937414706002826770}
+    - target: {fileID: 3550184551444995616, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550184551444995616, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4838856022550045128, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Camera
       value: 

@@ -16,6 +16,6 @@ MonoBehaviour:
   displayName: Prison
   icon: {fileID: 21300000, guid: 8584106d577199f40bde5a057be10430, type: 3}
   unlockType: 0
-  requiredLevel: 1000
+  requiredLevel: 10000
   rewardedId: prison
   skinPrefab: {fileID: 6215545185001656678, guid: b92251cec53c12a4ca98e619f908cbaf, type: 3}

@@ -26,15 +26,15 @@ public class Hook : MonoBehaviour
     private void Start()
     {
         _state = HookState.Idle;
-        
+
         _spring.connectedBody = _harpoonTransform.GetComponent<Rigidbody>();
         _spring.spring = 100f;
         _spring.damper = 5f;
         _spring.minDistance = 0f;
         _spring.maxDistance = 3f;
         _spring.enableCollision = false;
-        
-        _laser.OnRenderer();
+
+        UpdateLaserState();
     }
 
     private void Update()
@@ -52,6 +52,8 @@ public class Hook : MonoBehaviour
         {
             Return();
         }
+
+        UpdateLaserState();
     }
 
     private void Fire()
@@ -60,11 +62,9 @@ public class Hook : MonoBehaviour
 
         _initialPosition = transform.position;
         _state = HookState.Flying;
-        
-        _laser.OffRenderer();
 
         _harpoonControl.LockMovement();
-        
+
         StartCoroutine(DelayedAutoReturn());
     }
 
@@ -79,13 +79,13 @@ public class Hook : MonoBehaviour
             CompleteReturn();
         }
     }
-    
+
     private void BeginReturn()
     {
         if (_state == HookState.Returning) return;
 
-        _targetPosition = transform.position; 
-        _returnTimer = 0f;                    
+        _targetPosition = transform.position;
+        _returnTimer = 0f;
         _state = HookState.Returning;
     }
 
@@ -96,8 +96,6 @@ public class Hook : MonoBehaviour
 
         _state = HookState.Idle;
         _returnTimer = 0f;
-        
-        _laser.OnRenderer();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -120,10 +118,18 @@ public class Hook : MonoBehaviour
     private IEnumerator DelayedAutoReturn()
     {
         yield return new WaitForSeconds(_returnTime);
-        
+
         if (_state == HookState.Flying)
         {
             BeginReturn();
         }
+    }
+
+    private void UpdateLaserState()
+    {
+        if (_state == HookState.Idle)
+            _laser.OnRenderer();
+        else
+            _laser.OffRenderer();
     }
 }

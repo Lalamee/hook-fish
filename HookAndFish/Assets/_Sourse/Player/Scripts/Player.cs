@@ -4,6 +4,8 @@ using YG;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] AudioClipChosen _audioClipChosen;
+    
     private int _level;
     private int _startLevel;
     private int _countTrappedFish;
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
             _level++;
         
         _countTrappedFish++;
+        _audioClipChosen.PlayGoodAudio();
         
         CountTrappedFishChange?.Invoke(_countTrappedFish);
         LevelChange?.Invoke(_level);
@@ -67,17 +70,6 @@ public class Player : MonoBehaviour
     }
     
     public void EndFishInZone()
-    {
-        SetNewStartLevel();
-        ResetCountTrappedFish();
-    }
-    
-    private void SetNewStartLevel()
-    {
-        _startLevel = _level;
-    }
-    
-    private void ResetCountTrappedFish()
     {
         _countTrappedFish = 0;
     }

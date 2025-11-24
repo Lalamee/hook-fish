@@ -3,15 +3,17 @@ using YG;
 
 public class GoodEnd : MonoBehaviour
 {
+    [SerializeField] private UIInGame _uiInGame;
+    
     public void TurnOnObject()
     {
         gameObject.SetActive(true);
-        Time.timeScale = 0;
+        _uiInGame.gameObject.SetActive(false);
+
     }
 
     public void TurnOffObject()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1;
     }
 }

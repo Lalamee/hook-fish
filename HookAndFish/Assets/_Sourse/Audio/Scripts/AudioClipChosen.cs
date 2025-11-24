@@ -1,12 +1,19 @@
 using UnityEngine;
 
-
 [RequireComponent(typeof(AudioSource))]
 public class AudioClipChosen : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip goodEndClip;
     [SerializeField] private AudioClip badEndClip;
+
+    private void Awake()
+    {
+        if (_audioSource == null)
+            _audioSource = GetComponent<AudioSource>();
+        
+        _audioSource.spatialBlend = 0f;
+    }
 
     public void PlayGoodAudio()
     {
@@ -18,12 +25,5 @@ public class AudioClipChosen : MonoBehaviour
     {
         _audioSource.clip = badEndClip;
         _audioSource.Play();
-    }
-    
-    public void PlayGoodAudioInPlace()
-    {
-        Camera mainCamera = Camera.main;
-        Vector3 playPosition = mainCamera.transform.position;
-        AudioSource.PlayClipAtPoint(goodEndClip, playPosition);
     }
 }

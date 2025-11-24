@@ -6,7 +6,10 @@ namespace YG
     {
         public int playerLevel = 1;
         public int currentLevel = 1;
-        public float volume = 0.5f;
+
+        public float musicVolume = 0.5f;
+        public float sfxVolume = 0.5f;
+
         public List<int> recentLevels = new List<int>(3);
 
         public string selectedSkinId = "";

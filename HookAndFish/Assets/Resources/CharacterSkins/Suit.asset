@@ -16,6 +16,6 @@ MonoBehaviour:
   displayName: Suit
   icon: {fileID: 21300000, guid: 895c684564743e442b4a4a00e5791b8f, type: 3}
   unlockType: 0
-  requiredLevel: 10000
+  requiredLevel: 100000
   rewardedId: suit
   skinPrefab: {fileID: 2455626354773831268, guid: e67e6f28219042c46b7cb588e15f629a, type: 3}

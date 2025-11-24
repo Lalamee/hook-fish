@@ -1755,6 +1755,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554753757180055235, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 554753757180055235, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746921760442673286, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 5937414706002826770}
     - target: {fileID: 3082466039521856860, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1839,6 +1851,38 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 5937414706002826770}
+    - target: {fileID: 3550184551444995616, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550184551444995616, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693423013684803447, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424340109511535354, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6941412965932841415, guid: bd75b9f9dbc293a459648a846be2dc47, type: 3}
       propertyPath: m_Name
       value: Level UI

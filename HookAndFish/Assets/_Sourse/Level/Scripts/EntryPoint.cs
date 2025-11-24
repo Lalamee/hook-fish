@@ -21,6 +21,8 @@ public class EntryPoint : MonoBehaviour
     
     private void Awake()
     {
+        Time.timeScale = 1;
+        
         foreach (var stoper in _fishingStopers)
         {
             stoper.Initialize(_player, _boatMover, _harpoon, _hook, _laser);

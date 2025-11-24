@@ -10,7 +10,7 @@ public class GameUI : MonoBehaviour
     {
         _menuRoot.SetActive(true);
         _popup.PlayShow();    
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; 
     }
 
     public void CloseMenu() => StartCoroutine(CloseAfterRelease());
