@@ -15,7 +15,6 @@ public class AudioSetting : MonoBehaviour, IPointerUpHandler, IEndDragHandler
     [SerializeField] private AudioChannel _channel;
     [SerializeField] private AudioMixerGroup _mixer;
     [SerializeField] private string _parameter;
-
     [SerializeField] private Slider _volumeSlider;
     [SerializeField] private Toggle _muteToggle;
     [SerializeField] private Image _iconImage;
@@ -56,6 +55,7 @@ public class AudioSetting : MonoBehaviour, IPointerUpHandler, IEndDragHandler
             case AudioChannel.Sfx:
                 return Mathf.Clamp01(YG2.saves.sfxVolume);
         }
+        
         return 0.5f;
     }
 

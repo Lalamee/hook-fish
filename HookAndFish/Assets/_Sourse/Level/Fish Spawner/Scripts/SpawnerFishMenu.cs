@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnerFishMenu : MonoBehaviour
@@ -40,6 +38,7 @@ public class SpawnerFishMenu : MonoBehaviour
     private GameObject GetRandomPrefab(GameObject[] prefabs)
     {
         int randomIndex = Random.Range(0, prefabs.Length);
+        
         return prefabs[randomIndex];
     }
 
@@ -52,6 +51,7 @@ public class SpawnerFishMenu : MonoBehaviour
         } while (index == _previousSpawnIndex);
 
         _previousSpawnIndex = index;
+        
         return index;
     }
 }

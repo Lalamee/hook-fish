@@ -3,10 +3,10 @@ using DG.Tweening;
 
 public class BoatRecoil : MonoBehaviour
 {
-    [SerializeField] private float shakeDuration = 0.25f;
-    [SerializeField] private float shakeStrength = 5f;   
-    [SerializeField] private int vibrato = 8;
-    [SerializeField] private float randomness = 90f;
+    [SerializeField] private float _shakeDuration = 0.25f;
+    [SerializeField] private float _shakeStrength = 5f;   
+    [SerializeField] private int _vibrato = 8;
+    [SerializeField] private float _randomness = 90f;
 
     private Tween _shakeTween;
     
@@ -15,10 +15,10 @@ public class BoatRecoil : MonoBehaviour
         _shakeTween?.Kill();
         
         _shakeTween = transform.DOShakeRotation(
-            shakeDuration,  
-            shakeStrength,   
-            vibrato,        
-            randomness,     
+            _shakeDuration,  
+            _shakeStrength,   
+            _vibrato,        
+            _randomness,     
             true      
         );
     }

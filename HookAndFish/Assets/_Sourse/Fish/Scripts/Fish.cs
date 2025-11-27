@@ -15,8 +15,7 @@ public class Fish : MonoBehaviour
     private float _appearOvershoot = 1.12f;
     private float _vanishGrow = 0.2f;
     private float _vanishCollapse = 0.3f;
-    private float _caughtPhase = 0.25f;
-    private float _caughtCollapse = 0.4f;
+    private float _vanishOvershootScale = 1.2f;
 
     private Material _material;
     private Vector3 _initialScale;
@@ -66,7 +65,7 @@ public class Fish : MonoBehaviour
         DOTween.Kill(gameObject);
         
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(1.2f * _initialScale, _vanishGrow));
+        sequence.Append(transform.DOScale(_vanishOvershootScale * _initialScale, _vanishGrow));
         sequence.Append(transform.DOScale(Vector3.zero, _vanishCollapse).SetEase(Ease.InBack));
         sequence.OnComplete(() => Destroy(gameObject));
         
@@ -76,12 +75,6 @@ public class Fish : MonoBehaviour
     public void CatchMe()
     {
         DestroyMe();
-
-        // Sequence sequence = DOTween.Sequence();
-        // sequence.Append(transform.DOScale(new Vector3(1.5f * _initialScale.x, 0.5f * _initialScale.y, _initialScale.z), _caughtPhase).SetEase(Ease.InOutSine));
-        // sequence.Append(transform.DOScale(new Vector3(0.7f * _initialScale.x, 1.3f * _initialScale.y, _initialScale.z), _caughtPhase).SetEase(Ease.InOutSine));
-        // sequence.Append(transform.DOScale(Vector3.zero, _caughtCollapse).SetEase(Ease.InBack));
-        // sequence.OnComplete(() => Destroy(gameObject));
     }
 
     private void SpawnMe()

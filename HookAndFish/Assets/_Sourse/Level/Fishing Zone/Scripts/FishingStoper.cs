@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 [RequireComponent(typeof(FishingZone))]
 public class FishingStoper : MonoBehaviour

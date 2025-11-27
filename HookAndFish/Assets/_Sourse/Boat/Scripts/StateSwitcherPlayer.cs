@@ -9,8 +9,8 @@ public class StateSwitcherPlayer : MonoBehaviour
     [SerializeField] private Hook _hook;
     
     private Vector3 _targetPosition;
-    private float rotationSpeed = 5f;
-    private float moveSpeed = 5f; 
+    private float _rotationSpeed = 5f;
+    private float _moveSpeed = 5f; 
     private bool _isProcessing = false;
     
     private void Update()
@@ -40,8 +40,8 @@ public class StateSwitcherPlayer : MonoBehaviour
     private void RotateAndMoveToCenter()
     {
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        transform.position = Vector3.Lerp(transform.position, _targetPosition, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _targetPosition, _moveSpeed * Time.deltaTime);
 
         if (Quaternion.Angle(transform.rotation, targetRotation) < 1.1f)
         {

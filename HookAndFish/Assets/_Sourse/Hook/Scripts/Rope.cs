@@ -3,13 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Rope : MonoBehaviour
 {
-    [Header("References")]
     [SerializeField] private Transform _hook;
     [SerializeField] private Transform _harpoon;
     [SerializeField] private Hook _hookScript;
     [SerializeField] private LineRenderer _lineRenderer;
-
-    [Header("Appearance Settings")]
     [SerializeField] private Material _lineMaterial;
     [SerializeField] private float _lineWidth = 0.055f;
     [SerializeField] private Color _lineColor = new Color(0.08f, 0.08f, 0.08f, 1f);

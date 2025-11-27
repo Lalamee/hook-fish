@@ -18,7 +18,6 @@ public class PlayerSkinApplier : MonoBehaviour
 
     public void ApplySelectedSkin()
     {
-        // Если ничего не выбрано — ничего не подставляем.
         if (string.IsNullOrEmpty(YG2.saves.selectedSkinId))
         {
             Debug.Log("SelectedSkinId пуст — скин не подставляем.");

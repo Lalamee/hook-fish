@@ -49,10 +49,6 @@ public class SkinShop : MonoBehaviour
             UnlockAndSelect(skinId);
             NotifyChanged();
         }
-        else
-        {
-            Debug.Log($"[SkinShop] Нужен уровень {def.requiredLevel}, сейчас {YG2.saves.playerLevel}");
-        }
     }
 
     public void TryUnlockRewardedSkin(string skinId)
@@ -88,9 +84,9 @@ public class SkinShop : MonoBehaviour
     {
         if (skinLibrary == null)
         {
-            Debug.LogWarning("[SkinShop] SkinLibrary не назначен в инспекторе.");
             return null;
         }
+        
         return skinLibrary.Find(id);
     }
 

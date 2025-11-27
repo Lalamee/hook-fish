@@ -1,7 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(FishMover))]
-[RequireComponent(typeof(FishLevelTransmitter))]
+[RequireComponent(typeof(FishMover), typeof(FishLevelTransmitter))]
 public class TrappedFish : MonoBehaviour
 {
     [SerializeField] private FishLevelTransmitter _fishLevelTransmitter;

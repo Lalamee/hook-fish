@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class LookAtCamera : MonoBehaviour
 {
-    private Camera mainCamera;
+    private Camera _mainCamera;
+    private float _reflectionFactor; 
     
     private void Start()
     {
-        mainCamera = Camera.main;
+        _mainCamera = Camera.main;
+        _reflectionFactor = 2f;
     }
 
     private void Update()
     {
-        if (mainCamera != null)
+        if (_mainCamera != null)
         {
-            transform.LookAt(2 * transform.position - mainCamera.transform.position);
+            transform.LookAt(_reflectionFactor * transform.position - _mainCamera.transform.position);
         }
     }
 }

@@ -1,57 +1,33 @@
 using System;
 using System.Collections.Generic;
-using IJunior.TypedScenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
 using Random = UnityEngine.Random;
 
-public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
+public class LevelLoader : MonoBehaviour
 {
     public void LoadLevel()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(YG2.saves.currentLevel);
     }
 
     public void LoadMenu()
     {
-        Time.timeScale = 1;
         YG2.SaveProgress();
         SceneManager.LoadScene(1);
     }
 
     public void RestartThisLevel()
     {
-        Time.timeScale = 1f;
-
         ShowInterstitial(() =>
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         });
     }
 
-    private void ShowInterstitial(Action onComplete)
-    {
-        if (!YG2.isTimerAdvCompleted)
-        {
-            onComplete?.Invoke();
-            return;
-        }
-
-        YG2.InterstitialAdvShow();
-        
-        YG2.onCloseInterAdvWasShow += (bool shown) =>
-        {
-            onComplete?.Invoke();
-        };
-    }
-
     public void OnSceneLoaded(int argument)
     {
-        if (argument == 1)
-            Time.timeScale = 1f;
-
         SceneManager.LoadScene(argument);
     }
 
@@ -119,9 +95,24 @@ public class LevelLoader : MonoBehaviour, ISceneLoadHandler<int>
             if (history.Count > historyWindowSize)
                 history.RemoveRange(historyWindowSize, history.Count - historyWindowSize);
         }
-
-        Time.timeScale = 1f;
+        
         YG2.SaveProgress();
         SceneManager.LoadScene(nextBuildIndex);
+    }
+    
+    private void ShowInterstitial(Action onComplete)
+    {
+        if (!YG2.isTimerAdvCompleted)
+        {
+            onComplete?.Invoke();
+            return;
+        }
+
+        YG2.InterstitialAdvShow();
+        
+        YG2.onCloseInterAdvWasShow += (bool shown) =>
+        {
+            onComplete?.Invoke();
+        };
     }
 }

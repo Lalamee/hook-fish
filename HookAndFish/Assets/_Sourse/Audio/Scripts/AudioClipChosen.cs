@@ -4,8 +4,8 @@ using UnityEngine;
 public class AudioClipChosen : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip goodEndClip;
-    [SerializeField] private AudioClip badEndClip;
+    [SerializeField] private AudioClip _goodEndClip;
+    [SerializeField] private AudioClip _badEndClip;
 
     private void Awake()
     {
@@ -17,13 +17,13 @@ public class AudioClipChosen : MonoBehaviour
 
     public void PlayGoodAudio()
     {
-        _audioSource.clip = goodEndClip;
+        _audioSource.clip = _goodEndClip;
         _audioSource.Play();
     }
 
     public void PlayBadAudio()
     {
-        _audioSource.clip = badEndClip;
+        _audioSource.clip = _badEndClip;
         _audioSource.Play();
     }
 }
