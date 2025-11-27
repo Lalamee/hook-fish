@@ -1,12 +1,18 @@
 {
-    "idSave": 9,
-    "playerLevel": 1,
-    "currentLevel": 9,
+    "idSave": 89,
+    "playerLevel": 97,
+    "currentLevel": 6,
     "musicVolume": 0.5,
     "sfxVolume": 0.5,
-    "recentLevels": [],
-    "selectedSkinId": "mafia",
+    "recentLevels": [
+        17,
+        16,
+        20
+    ],
+    "selectedSkinId": "police",
     "unlockedSkinIds": [
-        "mafia"
+        "police",
+        "mafia",
+        "boxer"
     ]
 }
